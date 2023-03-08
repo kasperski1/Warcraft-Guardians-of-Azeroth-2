@@ -8,10 +8,11 @@
 	traditions = {
 		tradition_pastoralists
 		tradition_horse_breeder
-		tradition_sacred_hunts
+		tradition_might_is_right
 		tradition_warrior_culture
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_performative_honour
 		requires_dlc_flag = the_northern_lords
@@ -80,6 +81,7 @@ bleeding_hollow = {
 		fallback = tradition_isolationist
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_the_right_to_prove
 		requires_dlc_flag = the_northern_lords
@@ -114,6 +116,7 @@ blackrock = {
 		tradition_metal_craftsmanship
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_performative_honour
 		requires_dlc_flag = the_northern_lords
@@ -148,6 +151,7 @@ burning_blade = {
 		tradition_by_the_sword
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_the_right_to_prove
 		requires_dlc_flag = the_northern_lords
@@ -243,6 +247,7 @@ bonechewer = {
 		tradition_quarrelsome
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_performative_honour
 		requires_dlc_flag = the_northern_lords
@@ -334,6 +339,7 @@ frostwolf = {
 		tradition_tribe_unity
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_the_right_to_prove
 		requires_dlc_flag = the_northern_lords
@@ -366,8 +372,13 @@ twilights_hammer = {
 		tradition_zealous_people
 		tradition_mendicant_mystics
 		tradition_life_is_just_a_joke
-		tradition_culture_blending
 		tradition_faith_bound
+	}
+	
+	dlc_tradition = {
+		trait = tradition_culture_blending
+		requires_dlc_flag = royal_court
+		fallback = tradition_language_scholars
 	}
 	
 	name_list = name_list_twilights_hammer
@@ -395,6 +406,7 @@ dragonmaw = {
 		tradition_loyal_soldiers
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_the_right_to_prove
 		requires_dlc_flag = the_northern_lords
@@ -430,17 +442,18 @@ durotaric = {
 	martial_custom = martial_custom_equal
 	traditions = {
 		tradition_warriors_by_merit
-		tradition_warrior_culture
-		tradition_diasporic
+		tradition_warriors_of_the_dry
+		tradition_talent_acquisition
 		tradition_dryland_dwellers
 	}
 	
 	dlc_tradition = {
-		trait = tradition_malleable_invaders
+		trait = tradition_culture_blending		#Update to tradition_malleable_subjects in 1.6
 		requires_dlc_flag = royal_court
-		fallback = tradition_culture_blending
+		fallback = tradition_language_scholars
 	}
 	
+	# TODO Unique WC Tradition	
 	dlc_tradition = {
 		trait = tradition_fp1_trials_by_combat
 		requires_dlc_flag = the_northern_lords
@@ -497,7 +510,7 @@ moknathal = {
 	language = language_orcish
 	martial_custom = martial_custom_equal
 	traditions = {
-		tradition_diasporic
+		tradition_astute_diplomats
 		tradition_hunters
 		tradition_only_the_strong
 		tradition_isolationist

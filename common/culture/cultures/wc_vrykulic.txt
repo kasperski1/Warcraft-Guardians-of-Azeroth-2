@@ -11,12 +11,14 @@
 		tradition_stand_and_fight
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_coastal_warriors
 		requires_dlc_flag = the_northern_lords
 		fallback = tradition_hird
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_performative_honour
 		requires_dlc_flag = the_northern_lords
@@ -45,10 +47,17 @@ hyldnir = {
 	traditions = {
 		tradition_nubian_warrior_queens
 		tradition_stand_and_fight
-		tradition_hird
 		tradition_spartan
 	}
 	
+	# TODO Unique WC Tradition
+	dlc_tradition = {
+		trait = tradition_fp1_coastal_warriors
+		requires_dlc_flag = the_northern_lords
+		fallback = tradition_hird
+	}
+	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_the_right_to_prove
 		requires_dlc_flag = the_northern_lords
@@ -76,11 +85,18 @@ frost_vrykul = {
 	martial_custom = martial_custom_male_only
 	traditions = {
 		tradition_winter_warriors
-		tradition_hird
 		tradition_stand_and_fight
 		tradition_zealous_people
 	}
 	
+	# TODO Unique WC Tradition
+	dlc_tradition = {
+		trait = tradition_fp1_coastal_warriors
+		requires_dlc_flag = the_northern_lords
+		fallback = tradition_hird
+	}
+	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_performative_honour
 		requires_dlc_flag = the_northern_lords
@@ -110,24 +126,28 @@ stormheimir = {
 		tradition_stand_and_fight
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_coastal_warriors
 		requires_dlc_flag = the_northern_lords
 		fallback = tradition_hird
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_performative_honour
 		requires_dlc_flag = the_northern_lords
 		fallback = tradition_martial_admiration
 	}	
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_staunch_traditionalists
 		requires_dlc_flag = royal_court
 		fallback = tradition_isolationist
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_northern_stories
 		requires_dlc_flag = the_northern_lords
@@ -160,6 +180,7 @@ kvaldir = {
 		tradition_eye_for_an_eye
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_coastal_warriors
 		requires_dlc_flag = the_northern_lords

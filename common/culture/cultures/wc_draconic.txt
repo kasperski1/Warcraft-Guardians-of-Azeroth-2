@@ -36,10 +36,12 @@ black_dragon = {
 	traditions = {
 		tradition_astute_diplomats
 		tradition_sorcerous_metallurgy
-		tradition_practiced_pirates
+		tradition_by_the_sword
 		tradition_only_the_strong
+		tradition_warrior_monks
 	}
 	
+	# TODO Unique WC Tradition
 	dlc_tradition = {
 		trait = tradition_fp1_trials_by_combat
 		requires_dlc_flag = the_northern_lords
@@ -133,7 +135,7 @@ bronze_dragon = {
 		tradition_philosopher_culture
 		tradition_hard_working
 		tradition_legalistic
-		tradition_faith_bound
+		tradition_stalwart_defenders
 	}
 	
 	name_list = name_list_bronze_dragon
