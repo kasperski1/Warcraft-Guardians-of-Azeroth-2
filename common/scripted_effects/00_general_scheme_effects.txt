@@ -173,6 +173,14 @@ hostile_scheme_discovery_chance_effect = {
 			#Execution of owner discovery
 			limit = {
 				exists = scope:discover_owner
+				trigger_if = {
+					limit = {
+						exists = scope:spymaster
+					}
+					NOT = {
+						scope:spymaster = scope:owner
+					}
+				}
 			}
 			scope:target.host = {
 				trigger_event = hostile_scheme_discovery.1002
