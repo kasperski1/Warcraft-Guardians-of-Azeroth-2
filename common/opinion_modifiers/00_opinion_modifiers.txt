@@ -882,3 +882,9 @@ contempt_opinion = {
 	monthly_change = 0.05
 	decaying = yes
 }
+
+surgically_maimed = {
+	opinion = -30
+	years = 10
+	decaying = yes
+}
