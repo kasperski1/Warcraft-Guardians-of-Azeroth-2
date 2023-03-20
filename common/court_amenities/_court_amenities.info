@@ -19,6 +19,10 @@ court_amenities_category_name = {
 		ai_will_do = { ... }				# Script value in ruler scope. Court amenities are decided in the RARE_TASK_TICK. If multiple amenity levels are possible, the AI will enact the one with the highest score, with a bias towards the currently active one of CURRENT_COURT_AMENITY_SETTING_ADDED_WEIGHT to prevent switching back and forth to closely scored options
 		# The AI tries to get the single-level increase that gives the biggest increase in score
 		# This means that you want the scores to gradually become smaller, or the AI will go far down one path ignoring all the rest
+
+		can_pick = { ... }					# Trigger to check if the scoped character can pick this setting. Make sure that there are no gaps in tiers here. 
+											# Note that these triggers MUST be repeated to higher tiers because the AI does not skip levels when adjusting
+											# court amenities, it goes level by level both up and down. 
 	}										
 	
 	another_court_amenities_setting_name = {}
