@@ -101,3 +101,24 @@ artifact_ai_will_reforge_score = {
 		}
 	}
 }
+
+artifact_rarity = {
+	value = 1
+	if = {
+		limit = { rarity = common }
+		add = 1
+	}
+	else_if = {
+		limit = { rarity = masterwork }
+		add = 2
+	}
+	else_if = {
+		limit = { rarity = famed }
+		add = 3
+	}
+	else_if = {
+		limit = { rarity = illustrious }
+		add = 4
+	}
+}
+
