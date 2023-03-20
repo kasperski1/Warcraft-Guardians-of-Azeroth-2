@@ -58,6 +58,7 @@
 			every_child = {
 				limit = {
 					is_available_for_activity_trigger = yes
+					liege = root
 					OR = {
 						is_adult = yes
 						is_landed = yes
@@ -68,12 +69,14 @@
 			every_parent = {
 				limit = {
 					is_available_for_activity_trigger = yes
+					liege = root
 				}
 				add_to_temporary_list = potential_guests
 			}
 			every_sibling = {
 				limit = {
 					is_available_for_activity_trigger = yes
+					liege = root
 					OR = {
 						is_adult = yes
 						is_landed = yes
@@ -96,6 +99,9 @@
 						scheme_type = sway
 					}
 					exists = scheme_target
+					scheme_target = {
+						liege = root
+					}
 				}
 				scheme_target = {
 					add_to_temporary_list = potential_guests
