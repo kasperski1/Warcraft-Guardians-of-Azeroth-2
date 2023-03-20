@@ -200,7 +200,7 @@ tradition_legalistic = {
 }
 
 tradition_republican_legacy = {
-	category = realm
+	category = regional
 
 	layers = {
 		0 = steward
@@ -1789,6 +1789,7 @@ tradition_parochialism = {
 	is_shown = {
 		can_have_tradition_republican_legacy_trigger = no
 		
+		NOT = { has_cultural_tradition = tradition_republican_legacy }
 		# NOR ={
 			# this = culture:roman
 			# any_parent_culture_or_above = {
@@ -1809,6 +1810,7 @@ tradition_parochialism = {
 	#			this = culture:roman
 	#		}
 	#	}
+		NOT = { has_cultural_tradition = tradition_republican_legacy }
 	}
 	
 	parameters = {
