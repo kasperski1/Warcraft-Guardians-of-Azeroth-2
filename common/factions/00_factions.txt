@@ -458,7 +458,7 @@ claimant_faction = {
 		OR = {
 			special_character = {
 				is_alive = yes
-				has_claim_on = root.special_title
+				#has_claim_on = root.special_title
 				NOT = { is_incapable_trigger = yes }
 				trigger_if = { #If they're imprisoned by the faction target they can only be so for five years before invalidating
 					limit = {
