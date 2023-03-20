@@ -180,7 +180,10 @@ is_blocked_from_being_fired_from_council_trigger = {
 		OR = {
 			# Check in code if the court owner is prevented from firing the councilor
 			# can_fire_position must take a council task as input, but checks the councilor behind the task.
-			this.council_task = { can_fire_position = no }
+			AND = {
+				exists = this.council_task
+				this.council_task = { can_fire_position = no }
+			}
 			# Check for variable preventing the firing of a councilor set by script
 			AND = {
 				has_variable = block_fire_councillor
