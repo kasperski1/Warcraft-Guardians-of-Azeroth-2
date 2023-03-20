@@ -21,11 +21,11 @@ any_vassal_all  = {
 }
 
 any_vassal_percent = {
-	global = X_PERCENT_OF_CHARACTERS_VASSALS
+	global = ANY_OF_CHARACTERS_VASSALS_PERCENT
 }
 
-any_vassal_count_greater_or_equal = {
-	global = AT_LEAST_X_OF_CHARACTERS_VASSALS
+any_vassal_count = {
+	global = ANY_OF_CHARACTERS_VASSALS_COUNT
 }
 
 any_in_de_jure_hierarchy_percent_greater_or_equal = {
