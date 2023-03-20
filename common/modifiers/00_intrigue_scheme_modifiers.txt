@@ -74,3 +74,13 @@ intrigue_scheme_messenger_pigeon_modifier = {
 	icon = intrigue_positive
 	scheme_success_chance = 10
 }
+
+intrigue_scheme_secret_code_modifier = {
+	icon = intrigue_positive
+	scheme_secrecy = 10
+}
+
+intrigue_scheme_personally_translating_letters_modifier = {
+	icon = intrigue_positive
+	scheme_success_chance = 10
+}
