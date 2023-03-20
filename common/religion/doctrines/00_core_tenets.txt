@@ -1270,6 +1270,30 @@
 		parameters = {
 			meditation_mechanics_active = yes
 		}
+		
+		name = {
+			first_valid = {
+				triggered_desc = {
+					trigger = {
+						religion_tag = zoroastrianism_religion
+					}
+					desc = tenet_zurvanism_name
+				}
+				desc = tenet_asceticism_name
+			}
+		}
+
+		desc = {
+			first_valid = {
+				triggered_desc = {
+					trigger = {
+						religion_tag = zoroastrianism_religion
+					}
+					desc = tenet_zurvanism_desc
+				}
+				desc = tenet_asceticism_desc
+			}
+		}
 
 		traits = {
 			virtues = {
@@ -1823,21 +1847,18 @@
 			}
 		}
 
-		is_shown = {
-			# Warcraft
-			# OR = {
-				# like_baltic_religion_trigger = yes
-				# religion_tag = waaqism_religion
-			# }
-		}
-
 		parameters = {
 			safer_childbirths_active = yes
 			healthier_children_active = yes
+			piety_from_childbirth_active = yes
 		}
 
 		character_modifier = {
 			fertility = 0.1
+		}
+
+		traits = {
+			virtues = { pregnant }
 		}
 	}
 
