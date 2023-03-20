@@ -3918,37 +3918,6 @@ execute_prisoner_interaction = {
 					}
 				}
 			}
-			else = {
-				if = {
-					limit = {
-						scope:actor = {
-							has_execute_reason = scope:recipient
-						}
-					}
-					scope:actor = {
-						stress_impact = {
-							compassionate = medium_stress_impact_gain
-							forgiving = minor_stress_impact_gain
-						}
-					}
-				}
-				else = {
-					scope:actor = {
-						stress_impact = {
-							compassionate = medium_stress_impact_gain
-						}
-						if = {
-							limit = {
-								#Sacrificing is a valid reason for a just character to not gain stress
-								NOT = { always = scope:execution_sacrifice }
-							}
-							stress_impact = {
-								just = medium_stress_impact_gain
-							}
-						}
-					}
-				}
-			}
 
 			if = {
 				limit = {
