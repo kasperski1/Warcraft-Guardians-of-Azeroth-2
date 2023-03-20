@@ -490,6 +490,8 @@ hunting_grounds_01 = {
 	character_modifier = {
 		light_cavalry_damage_mult = 0.02
 		light_cavalry_pursuit_mult = 0.02
+		archer_cavalry_damage_mult = 0.02
+		archer_cavalry_pursuit_mult = 0.02
 
 		# Warcraft
 		light_aerial_damage_mult = 0.02
@@ -551,6 +553,9 @@ hunting_grounds_02 = {
 		light_cavalry_pursuit_mult = 0.04
 		light_cavalry_screen_mult = 0.02
 		light_cavalry_toughness_mult = 0.02
+		archer_cavalry_damage_mult = 0.04
+		archer_cavalry_pursuit_mult = 0.04
+		archer_cavalry_toughness_mult = 0.02
 
 		# Warcraft
 		light_aerial_damage_mult = 0.04
@@ -609,6 +614,9 @@ hunting_grounds_03 = {
 		light_cavalry_pursuit_mult = 0.06
 		light_cavalry_screen_mult = 0.02
 		light_cavalry_toughness_mult = 0.02
+		archer_cavalry_damage_mult = 0.06
+		archer_cavalry_pursuit_mult = 0.06
+		archer_cavalry_toughness_mult = 0.02
 
 		# Warcraft
 		light_aerial_damage_mult = 0.06
@@ -667,6 +675,9 @@ hunting_grounds_04 = {
 		light_cavalry_pursuit_mult = 0.08
 		light_cavalry_screen_mult = 0.04
 		light_cavalry_toughness_mult = 0.04
+		archer_cavalry_damage_mult = 0.08
+		archer_cavalry_pursuit_mult = 0.08
+		archer_cavalry_toughness_mult = 0.04
 		
 		# Warcraft
 		light_aerial_damage_mult = 0.08
@@ -725,6 +736,9 @@ hunting_grounds_05 = {
 		light_cavalry_pursuit_mult = 0.1
 		light_cavalry_screen_mult = 0.04
 		light_cavalry_toughness_mult = 0.04
+		archer_cavalry_damage_mult = 0.1
+		archer_cavalry_pursuit_mult = 0.1
+		archer_cavalry_toughness_mult = 0.04
 
 		# Warcraft
 		light_aerial_damage_mult = 0.1
@@ -786,6 +800,9 @@ hunting_grounds_06 = {
 		light_cavalry_pursuit_mult = 0.12
 		light_cavalry_screen_mult = 0.06
 		light_cavalry_toughness_mult = 0.06
+		archer_cavalry_damage_mult = 0.12
+		archer_cavalry_pursuit_mult = 0.12
+		archer_cavalry_toughness_mult = 0.06
 
 		# Warcraft
 		light_aerial_damage_mult = 0.12
@@ -847,6 +864,9 @@ hunting_grounds_07 = {
 		light_cavalry_pursuit_mult = 0.14
 		light_cavalry_screen_mult = 0.06
 		light_cavalry_toughness_mult = 0.06
+		archer_cavalry_damage_mult = 0.14
+		archer_cavalry_pursuit_mult = 0.14
+		archer_cavalry_toughness_mult = 0.06
 
 		# Warcraft
 		light_aerial_damage_mult = 0.14
@@ -912,6 +932,9 @@ hunting_grounds_08 = {
 		light_cavalry_pursuit_mult = 0.16
 		light_cavalry_screen_mult = 0.08
 		light_cavalry_toughness_mult = 0.08
+		archer_cavalry_damage_mult = 0.16
+		archer_cavalry_pursuit_mult = 0.16
+		archer_cavalry_toughness_mult = 0.08
 
 		# Warcraft
 		light_aerial_damage_mult = 0.16
