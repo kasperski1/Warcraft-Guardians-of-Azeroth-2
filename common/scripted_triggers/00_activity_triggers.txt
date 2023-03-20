@@ -80,6 +80,15 @@ petition_liege_council_seat_trigger = {
 					}
 				}
 			}
+			NOT = { exists = cp:councillor_chancellor }
+			NOT = { exists = cp:councillor_marshal }
+			NOT = { exists = cp:councillor_steward }
+			NOT = { exists = cp:councillor_spymaster }
+			trigger_if = {
+				limit = { root.faith = root.liege.faith }
+				root.faith = { has_doctrine = doctrine_clerical_succession_temporal_appointment }
+				NOT = { exists = cp:councillor_court_chaplain }
+			}
 		}
 	}
 }
@@ -368,39 +377,39 @@ petition_liege_skiller_trigger = {
 	
 	trigger_if = {
 		limit = { exists = scope:second_party }
-		NOT = { THIS = scope:second_party }
+		NOT = { this = scope:second_party }
 	}
 	trigger_if = {
 		limit = { exists = scope:vassal_claimant }
-		NOT = { THIS = scope:vassal_claimant }
+		NOT = { this = scope:vassal_claimant }
 	}
 	trigger_if = {
 		limit = { exists = scope:second_councillor }
-		NOT = { THIS = scope:second_councillor }
+		NOT = { this = scope:second_councillor }
 	}
 	trigger_if = {
 		limit = { exists = scope:diplomacy_check }
-		NOT = { THIS = scope:diplomacy_check }
+		NOT = { this = scope:diplomacy_check }
 	}
 	trigger_if = {
 		limit = { exists = scope:martial_check }
-		NOT = { THIS = scope:martial_check }
+		NOT = { this = scope:martial_check }
 	}
 	trigger_if = {
 		limit = { exists = scope:stewardship_check }
-		NOT = { THIS = scope:stewardship_check }
+		NOT = { this = scope:stewardship_check }
 	}
 	trigger_if = {
 		limit = { exists = scope:intrigue_check }
-		NOT = { THIS = scope:intrigue_check }
+		NOT = { this = scope:intrigue_check }
 	}
 	trigger_if = {
 		limit = { exists = scope:learning_check }
-		NOT = { THIS = scope:learning_check }
+		NOT = { this = scope:learning_check }
 	}
 	trigger_if = {
 		limit = { exists = scope:petition_vassal }
-		NOT = { THIS = scope:petition_vassal }
+		NOT = { this = scope:petition_vassal }
 	}
 }
 
@@ -408,36 +417,51 @@ petition_liege_skiller_trigger = {
 petition_liege_has_main_skiller_trigger = { 
 	scope:petition_liege = {
 		OR = {
-			AND = {
-				exists = cp:councillor_chancellor
+			trigger_if = {
+				limit = { exists = cp:councillor_chancellor }
 				cp:councillor_chancellor = { petition_liege_skiller_trigger = yes }
 			}
-			AND = {
-				exists = cp:councillor_marshal
+			trigger_else = { always = no }
+			
+			trigger_if = {
+				limit = { exists = cp:councillor_marshal }
 				cp:councillor_marshal = { petition_liege_skiller_trigger = yes }
 			}
-			AND = {
-				exists = cp:councillor_steward
+			trigger_else = { always = no }
+
+			trigger_if = {
+				limit = { exists = cp:councillor_steward }
 				cp:councillor_steward = { petition_liege_skiller_trigger = yes }
 			}
-			AND = {
-				exists = cp:councillor_spymaster
+			trigger_else = { always = no }
+
+			trigger_if = {
+				limit = { exists = cp:councillor_spymaster }
 				cp:councillor_spymaster = { petition_liege_skiller_trigger = yes }
 			}
-			AND = {
-				exists = cp:councillor_court_chaplain
+			trigger_else = { always = no }
+
+			trigger_if = {
+				limit = { exists = cp:councillor_court_chaplain }
 				cp:councillor_court_chaplain = { petition_liege_skiller_trigger = yes }
 			}
-			AND = {
-				is_married = yes
+			trigger_else = { always = no }
+
+			trigger_if = {
+				limit = {
+					is_married = yes
+					exists = primary_spouse
+				}
 				primary_spouse = {
 					is_landed = no 
 					petition_liege_skiller_trigger = yes
+					exists = scope:petition_vassal
 					NOT = {
-						any_relation = { THIS = scope:petition_vassal }
+						any_relation = { this = scope:petition_vassal }
 					}
 				}
 			}
+			trigger_else = { always = no }
 		}
 	}
 }
