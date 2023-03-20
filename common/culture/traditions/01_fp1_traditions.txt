@@ -9,7 +9,7 @@
 # Warcraft - standardised so it can replace tradition_hird
 # Removed coastal requirement
 tradition_fp1_coastal_warriors = {
-	category = realm
+	category = combat
 
 	layers = {
 		0 = martial
