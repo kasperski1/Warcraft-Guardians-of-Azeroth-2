@@ -461,3 +461,8 @@ death_by_artifact = {
 	public_knowedge = yes
 	icon = "death_murder.dds"
 }
+
+death_for_corpse_forest = {
+	public_knowedge = yes
+	icon = "death_murder.dds"
+}
