@@ -927,6 +927,9 @@ tradition_mountaineer_ruralism = {
 	}
 	
 	can_pick = {
+		NOT = {
+			has_cultural_tradition = tradition_mountain_homes
+		}
 		custom_tooltip = {
 			text = culture_in_hills_percentage_desc
 			scope:character = {
