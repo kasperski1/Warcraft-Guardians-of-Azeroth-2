@@ -59,8 +59,10 @@ parthian_tactics_perk = {
 		massive_aerial_pursuit_mult = 0.1
 		massive_aerial_toughness_mult = 0.2
 		
-		skirmishers_damage_mult = 0.2
-		skirmishers_toughness_mult = 0.1
+		camel_cavalry_pursuit_mult = 0.2
+		camel_cavalry_toughness_mult = 0.3
+		elephant_cavalry_pursuit_mult = 0.2
+		elephant_cavalry_toughness_mult = 0.3
 		archer_cavalry_pursuit_mult = 0.2
 		archer_cavalry_toughness_mult = 0.2
 	}
