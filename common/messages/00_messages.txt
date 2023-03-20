@@ -1336,6 +1336,10 @@ msg_law_invalidated = {
 	icon = "law"
 	soundeffect = @msg_neutral_soundeffect	
 }
+msg_law_invalidated_no_new_law = {
+	icon = "law"
+	soundeffect = @msg_neutral_soundeffect	
+}
 
 msg_betrothal_invalidated = {
 	icon = "marriage"
@@ -1776,6 +1780,10 @@ msg_court_position_invalidated_employee = {
 	soundeffect = @toast_soundeffect_neutral
 }
 msg_court_position_invalidated_employer = {
+	display = toast
+	soundeffect = @toast_soundeffect_neutral
+}
+msg_court_amenity_setting_invalidated = {
 	display = toast
 	soundeffect = @toast_soundeffect_neutral
 }
