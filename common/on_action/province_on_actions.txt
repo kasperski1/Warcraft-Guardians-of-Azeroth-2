@@ -8,9 +8,19 @@ on_building_completed = {
 					culture = {
 						has_cultural_parameter = development_gain_on_building_complete
 					}
+					NOT = {
+						county = {
+							has_variable = dev_gain_cooldown
+						}
+					}
 				}
 				county = {
 					change_development_progress_with_overflow = 25
+					set_variable = {
+						name = dev_gain_cooldown
+						value = yes
+						days = 365
+					}
 				}
 			}
 
