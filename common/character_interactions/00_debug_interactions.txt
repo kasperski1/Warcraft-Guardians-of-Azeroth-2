@@ -393,11 +393,15 @@ slay_character_interaction = {
 			save_scope_as = rando
 		}
 		scope:recipient = {
-			override_death_killer_effect = { death_reason = death_duel killer = scope:rando }
+			death = {
+				death_reason = death_duel
+				killer = scope:rando
+			}
 		}
 	}
 	auto_accept = yes
 }
+
 
 give_bubonic_plague_interaction = {
 	category = interaction_debug_main
@@ -544,7 +548,7 @@ add_artifact_interaction = {
 		flag = trinket
 		localization = add_artifact_interaction_trinket
 	}
-	
+
 	on_accept = {
 		custom_tooltip = add_artifact_interaction
 
@@ -702,6 +706,44 @@ add_artifact_interaction = {
 	auto_accept = yes
 }
 
+take_artifact_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = artifact
+
+	target_type = artifact
+	target_filter = recipient_artifacts
+
+	is_shown = {
+		debug_only = yes
+		scope:recipient = {
+			any_character_artifact = { exists = this }
+		}
+		NOT = {
+			scope:recipient = scope:actor
+		}
+	}
+	
+	is_highlighted = {
+		always = yes
+	}
+
+	on_accept = {
+		scope:target = {
+			set_owner = scope:actor
+		}
+	}
+
+	auto_accept = yes
+	
+	ai_accept = {
+		base = 100
+	}
+	
+	auto_accept = yes
+}
+
 add_random_artifact_interaction = {
 	category = interaction_debug_main
 	use_diplomatic_range = no
@@ -756,6 +798,84 @@ add_random_artifact_interaction = {
 		}
 	}
 
+	auto_accept = yes
+}
+
+add_relic_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	icon = icon_artifact
+	is_shown = {
+		debug_only = yes
+	}
+	send_option = {
+		flag = christian
+		localization = Christian
+	}
+
+	send_option = {
+		flag = islam
+		localization = islam_religion
+	}
+
+	send_option = {
+		flag = buddhism
+		localization = buddhism_religion
+	}
+
+	send_option = {
+		flag = judaism
+		localization = judaism_religion
+	}
+	
+	on_accept = {
+
+		if = {
+			limit = { scope:christian = yes }
+			scope:actor = {
+				hidden_effect = {
+					create_artifact_pedestal_reliquary_christian_effect = { 
+						OWNER = scope:actor
+					}
+				}
+			}
+		}	
+
+		else_if = {
+			limit = { scope:islam = yes }
+			scope:actor = {
+				hidden_effect = {
+					create_artifact_pedestal_reliquary_islam_effect = { 
+						OWNER = scope:actor
+					}
+				}
+			}
+		}
+
+		else_if = {
+			limit = { scope:buddhism = yes }
+			scope:actor = {
+				hidden_effect = {
+					create_artifact_pedestal_reliquary_buddhism_effect = { 
+						OWNER = scope:actor
+					}
+				}
+			}
+		}
+
+		else_if = {
+			limit = { scope:judaism = yes }
+			scope:actor = {
+				hidden_effect = {
+					create_artifact_pedestal_reliquary_judaism_effect = { 
+						OWNER = scope:actor
+					}
+				}
+			}
+		}
+
+	}
+	
 	auto_accept = yes
 }
 
@@ -1239,4 +1359,22 @@ give_criminal_trait_interaction = {
 	}
 	
 	auto_accept = yes
+}
+
+generate_artifact_with_history_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		debug_only = yes
+		NOT = { scope:recipient = scope:actor }
+	}
+	
+	on_accept = {
+		scope:actor = { trigger_event = debug.400 }
+	}
+	
+	auto_accept = yes
+	
 }
