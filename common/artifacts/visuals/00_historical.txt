@@ -1,6 +1,5 @@
 ﻿sculpture_ark_of_covenant = {
 	icon = "artifact_reliquary.dds"
-	support_type = "short"
 	asset = ep1_unique_ark_of_covenant_entity
 }
 sculpture_babr_e_bayan = {
@@ -43,8 +42,8 @@ throne_charlemagne = {
 	asset = ep1_mediterranean_throne_basic_01_a_entity
 }
 throne_solomon = {
-	icon = "artifact_throneroom.dds"
-	asset = ep1_mediterranean_throne_fancy_01_a_entity
+	icon = "artifact_unique_throne_of_solomon.dds"
+	asset = ep1_throne_of_solomon_01_a_entity
 }
 throne_scone = {
 	icon = "artifact_throneroom.dds"
@@ -229,6 +228,14 @@ wall_sword_attila = {
 	icon = "artifact_sword.dds"
 	asset = ep1_steppe_sword_01_a_entity
 }
+
+olifant_court = {
+	default_type = pedestal
+	icon = "artifact_regalia.dds"
+	asset = ep1_olifant_entity
+	pedestal = "tall_pillow"
+}
+
 sculpture_cabinet_pentapyrgion = {
 	icon = "artifact_cabinet.dds"
 	asset = ep1_mediterranean_cabinet_fancy_01_a_entity
