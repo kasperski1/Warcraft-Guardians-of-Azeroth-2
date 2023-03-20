@@ -760,6 +760,7 @@ artifact_feature_animal_bear_trigger = {
 					terrain = desert
 					terrain = desert_mountains
 					terrain = plains
+					terrain = hills
 					terrain = steppe
 				}
 				NOT = { africa_like_region_trigger = yes }
