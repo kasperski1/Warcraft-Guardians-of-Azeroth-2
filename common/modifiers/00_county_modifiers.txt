@@ -150,3 +150,9 @@ promote_culture_modifier = {
 	monthly_county_control_change_add = 0.3
 	defender_holding_advantage = 5
 }
+
+divide_and_conquer_modifier = {
+	icon = county_modifier_development_positive
+	county_opinion_add = 5
+	levy_size = 0.1
+}
