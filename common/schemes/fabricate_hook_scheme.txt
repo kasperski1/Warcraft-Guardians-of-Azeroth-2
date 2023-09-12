@@ -4,7 +4,7 @@
 	desc = fabricate_hook_desc_general
 	hostile = yes
 	uses_agents = no
-	icon = icon_scheme_hostile
+	icon = icon_scheme_fabricate_hook
 	
 	allow = {
 		OR = {
@@ -15,6 +15,15 @@
 					has_relation_rival = scope:target 
 				}
 			}
+			#AND = {
+			#	any_character_struggle = {
+			#		involvement = involved
+			#		has_struggle_phase_parameter = unlocks_fabricate_hooks_for_all
+			#		is_secondary_character_involvement_either_trigger = {
+			#			CHAR = scope:target
+			#		}
+			#	}
+			#}
 		}
 		
 		is_adult = yes
@@ -51,7 +60,7 @@
 			is_imprisoned = no
 			NOT = { is_incapable_trigger = yes }
 			#exists = location
-			in_diplomatic_range_trigger = { target = scope:owner }
+			in_diplomatic_range = scope:owner
 		}
 
 		#Temporary fix to communicate to players that the scheme is unavailabe. 
@@ -234,6 +243,9 @@
 				has_trait = craven
 			}
 		}
+
+		# Diarchs are better at schemes within their liege's realm
+		diarch_scheming_within_realm_bonus_modifier = yes
 
 		compare_modifier = {
 			value = scope:owner.cp:councillor_spymaster.intrigue
@@ -434,6 +446,12 @@
 
 	
 	on_invalidated = {
+		scheme_target = {
+			save_scope_as = target
+		}
+		scheme_owner = {
+			save_scope_as = owner
+		}
 		if = {
 			limit = {
 				scope:target = { is_alive = no }
@@ -499,7 +517,7 @@
 		else_if = {
 			limit = {
 				scope:target = { 
-					NOT = { in_diplomatic_range_trigger = { target = scope:owner } } 
+					NOT = { in_diplomatic_range = scope:owner } 
 				}
 			}
 			scope:owner = {

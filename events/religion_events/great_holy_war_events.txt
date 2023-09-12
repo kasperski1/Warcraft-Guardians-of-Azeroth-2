@@ -289,7 +289,7 @@ great_holy_war.0003 = {
 
 	theme = faith
 	override_background = {
-		event_background = temple_scope
+		reference = temple_scope
 	}
 	left_portrait = scope:ghw_sponsor
 	
@@ -769,9 +769,20 @@ great_holy_war.0011 = {
 	}
 	theme = faith
 	override_background = {
-		event_background = temple_scope
+		reference = temple_scope
 	}
-	left_portrait = scope:ghw_first_sponsor
+	left_portrait = {
+		character = scope:ghw_first_sponsor
+		triggered_animation = {
+			trigger = {
+				scope:awakening_faith = {
+					has_doctrine = doctrine_temporal_head
+				}
+			}
+  			animation = marshal
+  		}
+		animation = personality_zealous
+	}
 	
 	immediate = {
 		scope:ghw_first_sponsor = {
@@ -2960,6 +2971,7 @@ great_holy_war.0030 = {
 # Player wishes to give money to the Crusade.
 great_holy_war.0040 = {
 	type = character_event
+	title = great_holy_war.0003.title
 	desc = great_holy_war.0040.desc
 	theme = faith
 	left_portrait = root
@@ -3134,7 +3146,7 @@ great_holy_war.0050 = {
 
 	theme = faith
 	override_background = {
-		event_background = armory
+		reference = armory
 	}
 	
 	immediate = {
@@ -3191,7 +3203,7 @@ great_holy_war.0051 = {
 	}
 	
 	theme = faith
-	override_background = { event_background = armory }
+	override_background = { reference = armory }
 
 	left_portrait = {
 		character = scope:ghw_sponsor
@@ -3262,7 +3274,7 @@ great_holy_war.0071 = {
 	}
 	theme = faith
 	override_background = {
-		event_background = armory
+		reference = armory
 	}
 	right_portrait = {
 		character = scope:ghw_sponsor
@@ -3310,6 +3322,8 @@ great_holy_war.0071 = {
 
 	# Warcraft
 
+	#	custom_tooltip = great_holy_war.0051.generic.start.tt
+#	}
 	option = {
 		name = great_holy_war.0011.c
 		trigger = {
@@ -3331,6 +3345,9 @@ great_holy_war.0071 = {
 	}
 	option = {
 		name = great_holy_war.0050.a
+		trigger = {
+			NOT = { scope:attacker.faith = root.faith }
+		}
 		fallback = yes
 
 		custom_tooltip = great_holy_war.0051.generic.start.tt
@@ -3381,7 +3398,7 @@ great_holy_war.0052 = {
 	}
 	theme = faith
 	override_background = {
-		event_background = battlefield
+		reference = battlefield
 	}
 	left_portrait = {
 		character = scope:title_recipient
@@ -3448,7 +3465,7 @@ great_holy_war.0053 = {
 	}
 	theme = faith
 	override_background = {
-		event_background = battlefield
+		reference = battlefield
 	}
 	left_portrait = {
 		character = scope:ghw_sponsor
@@ -3495,11 +3512,10 @@ great_holy_war.0055 = {
 		save_scope_as = the_ghw
 
 		#Loc keys for localisation fluff.
-		ghw_war_declarer = { save_scope_as = ghw_sponsor }
 		ghw_target_character = { save_scope_as = ghw_defender }
-		ghw_war_declarer.faith = { save_scope_as = the_faith }
-
 		faith = {
+			religious_head = { save_scope_as = ghw_sponsor }
+			save_scope_as = the_faith
 			change_fervor = {
 				value =  -10
 				desc = fervor_loss_crusade_invalid
@@ -3527,7 +3543,7 @@ great_holy_war.0056 = {
 	desc = great_holy_war.0056.desc
 	theme = faith
 	override_background = {
-		event_background = battlefield
+		reference = battlefield
 	}
 	right_portrait = {
 		character = scope:ghw_sponsor
@@ -3682,7 +3698,7 @@ great_holy_war.0057 = {
 	}
 	theme = faith
 	override_background = {
-		event_background = wilderness_scope
+		reference = wilderness_scope
 	}
 	left_portrait = root
 	
@@ -3877,12 +3893,12 @@ great_holy_war.0070 = {
 	desc = great_holy_war.0070.base.desc
 	theme = faith
 	override_background = {
-		event_background = throne_room_scope
+		reference = throne_room_scope
 	}
 
 	left_portrait = {
 		character = scope:title_recipient
-		animation = ececstasy
+		animation = ecstasy
 	}
 	
 	trigger = { is_ai = no }

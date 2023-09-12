@@ -5,7 +5,7 @@ k_stromgarde = {
 	587.1.1={
 		effect = {
 			if = {
-				limit = { current_date < 600.1.1 }
+				limit = { game_start_date < 600.1.1 }
 				holder = { join_pol_faction_effect = { faction = alliance give_modifiers = no } }
 			}
 		}
@@ -161,6 +161,9 @@ c_dabyrie = {
 	}
 	570.1.1={
 		holder=38020
+	}
+	603.1.1={
+		holder=kenata_dabyrie
 	}
 	603.3.16={
 		liege=d_western_arathi

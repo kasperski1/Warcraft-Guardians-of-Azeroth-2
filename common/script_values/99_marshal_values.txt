@@ -11,6 +11,7 @@ marshal_organize_levies_base = {
 
 marshal_organize_levies_skill_base = {
 	add = martial
+	add = martial
 }
 
 # Erudition bonus
@@ -445,4 +446,23 @@ marshal_scheme_overtime_boost_max = {
 	multiply = 2
 	floor = yes
 	min = -40
+}
+
+### Reliable House modifier
+marshal_reliable_house_scale = {
+	value = 0
+	if = {
+		limit = {
+			exists = liege.dynasty
+			liege.dynasty = { has_dynasty_perk = fp2_coterie_legacy_2 }
+			house = liege.house
+		}
+		add = martial
+		multiply = {
+			add = council_reliable_house_percentage
+			divide = 100
+		}
+		floor = yes
+		min = 1
+	}
 }

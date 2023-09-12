@@ -81,15 +81,19 @@ chancellor_foreign_affairs_realm_opinion_scale = {
 	add = 0
 	if = {
 		limit = {
-			is_ai = yes
-			scope:councillor_liege = { is_independent_ruler = no }
+			scope:councillor_liege = {
+				is_independent_ruler = no
+				is_ai = yes
+			}
 		}
 		add = chancellor_foreign_affairs_opinion_max
 	}
 	else_if = {
 		limit = {
-			has_variable = chancellor_foreign_affairs_opinion_value
-			scope:councillor_liege = { is_independent_ruler = no }
+			scope:councillor_liege = {
+				is_independent_ruler = no
+				has_variable = chancellor_foreign_affairs_opinion_value
+			}
 		}
 		add = liege.var:chancellor_foreign_affairs_opinion_value
 	}
@@ -251,10 +255,10 @@ chancellor_domestic_affairs_opinion_scale = {
 	value = 0
 	if = {
 		limit = {
-		    scope:councillor_liege = {
-		        is_ai = yes
-		        is_independent_ruler = yes
-		    }
+			scope:councillor_liege = {
+				is_ai = yes
+				is_independent_ruler = yes
+			}
 		}
 		add = chancellor_domestic_affairs_opinion_max
 	}
@@ -269,6 +273,67 @@ chancellor_domestic_affairs_opinion_scale = {
 chancellor_domestic_affairs_monthly_increase = {
 	add = chancellor_domestic_affairs_opinion_max
 	divide = 24
+}
+
+chancellor_domestic_affairs_tyranny_base = {
+	add = diplomacy
+	#multiply = 2
+	min = 1
+}
+
+chancellor_domestic_affairs_tyranny_chains_of_loyalty_bonus = {
+	value = 0
+	if = {
+		limit = {
+			scope:councillor_liege = { has_perk = chains_of_loyalty_perk }
+		}
+		add = {
+			value = chancellor_domestic_affairs_tyranny_base
+			multiply = {
+				add = chains_of_loyalty_percentage
+				divide = 100
+			}
+		}
+	}
+}
+
+chancellor_domestic_affairs_tyranny_erudition_bonus = {
+	value = 0
+	if = {
+		limit = {
+			councillor_liege_has_erudition_legacy_5_perk = yes
+		}
+		add = {
+			value = chancellor_domestic_affairs_tyranny_base
+			multiply = {
+				add = erudition_legacy_5_percentage
+				divide = 100
+			}
+		}
+	}
+}
+
+chancellor_domestic_affairs_tyranny_family_business_bonus = {
+	value = 0
+	if = {
+		limit = {
+			councillor_liege_has_family_business_bonus = yes
+		}
+		add = {
+			value = chancellor_domestic_affairs_tyranny_base
+			multiply = {
+				add = family_business_councillors_percentage
+				divide = 100
+			}
+		}
+	}
+}
+
+chancellor_domestic_affairs_tyranny_total = {
+	add = chancellor_domestic_affairs_tyranny_base
+	add = chancellor_domestic_affairs_tyranny_chains_of_loyalty_bonus
+	add = chancellor_domestic_affairs_tyranny_erudition_bonus
+	add = chancellor_domestic_affairs_tyranny_family_business_bonus
 }
 
 #####################
@@ -430,11 +495,31 @@ chancellor_learn_on_the_job_scale = {
 	value = 0
 	if = {
 		limit = {
+			exists = liege
 			liege = { has_perk = learn_on_the_job_perk }
 		}
 		add = diplomacy
 		multiply = {
 			add = learn_on_the_job_percentage
+			divide = 100
+		}
+		floor = yes
+		min = 1
+	}
+}
+
+### Reliable House modifier
+chancellor_reliable_house_scale = {
+	value = 0
+	if = {
+		limit = {
+			exists = liege.dynasty
+			liege.dynasty = { has_dynasty_perk = fp2_coterie_legacy_2 }
+			house = liege.house
+		}
+		add = diplomacy
+		multiply = {
+			add = council_reliable_house_percentage
 			divide = 100
 		}
 		floor = yes

@@ -1,13 +1,10 @@
-﻿
-
-is_available_for_activity_trigger = {
-	can_join_activities = yes
+﻿is_available_for_activity_trigger = {
+	NOT = { exists = involved_activity }
 	is_adult = yes
 	OR = {
 		is_ai = no
-		is_busy_in_events = no
+		is_busy_in_events_unlocalised = no
 	}
-	is_in_an_activity = no
 	is_at_war = no
 	is_imprisoned = no
 	is_healthy = yes
@@ -18,18 +15,45 @@ is_available_for_activity_trigger = {
 }
 
 is_available_for_child_activity_trigger = {
-	can_join_activities = yes
+	NOT = { exists = involved_activity }
 	is_adult = no
 	age >= 4
 	OR = {
 		is_ai = no
-		is_busy_in_events = no
+		is_busy_in_events_unlocalised = no
 	}
-	is_in_an_activity = no
+	is_at_war = no
+	is_imprisoned = no
+	is_hostage = no
+	is_healthy = yes
+	NOR = {
+		exists = var:hostage_travelling_to_warden
+		exists = var:ward_travelling_to_guardian
+	}
+}
+
+is_available_in_activity_trigger = {
+	exists = involved_activity
+	is_adult = yes
+	OR = {
+		is_ai = no
+		is_busy_in_events_unlocalised = no
+	}
 	is_at_war = no
 	is_imprisoned = no
 	is_healthy = yes
-	NOT = { exists = var:booked_for_a_party }
+}
+
+### Witch Ritual
+activity_witch_ritual_valid_trigger = {
+	exists = house
+	house = {
+		has_house_modifier = witch_coven
+		any_house_member = {
+			NOT = { this = root }
+			is_witch_known_by_trigger = { CHARACTER = root }
+		}
+	}
 }
 
 ### Petition Liege triggers
@@ -74,11 +98,20 @@ petition_liege_council_seat_trigger = {
 				limit = { root.faith = root.liege.faith }
 				root.faith = { has_doctrine = doctrine_clerical_succession_temporal_appointment }
 				exists = cp:councillor_court_chaplain
-				cp:councillor_chancellor = {
+				cp:councillor_court_chaplain = {
 					NOT = {
 						is_blocked_from_being_fired_from_council_trigger = { COURT_OWNER = root.liege }
 					}
 				}
+			}
+			NOT = { exists = cp:councillor_chancellor }
+			NOT = { exists = cp:councillor_marshal }
+			NOT = { exists = cp:councillor_steward }
+			NOT = { exists = cp:councillor_spymaster }
+			trigger_if = {
+				limit = { root.faith = root.liege.faith }
+				root.faith = { has_doctrine = doctrine_clerical_succession_temporal_appointment }
+				NOT = { exists = cp:councillor_court_chaplain }
 			}
 		}
 	}
@@ -102,6 +135,9 @@ petition_liege_councillor_second_trigger = {
 }
 
 petition_liege_councillor_blocked_trigger = {
+	scope:petition_vassal = {
+		can_be_$ROLE$_trigger = { COURT_OWNER = scope:petition_liege }
+	}
 	trigger_if = {
 		limit = { exists = scope:petition_liege.cp:councillor_$ROLE$ }
 		scope:petition_liege.cp:councillor_$ROLE$ = {
@@ -246,8 +282,13 @@ petition_liege_title_liege_trigger = {
 
 # Vassal Title
 petition_liege_title_vassal_trigger = {
+	exists = holder
 	holder = { save_temporary_scope_as = second_temp }
-	scope:second_temp.liege = prev.liege
+	OR = {
+		scope:second_temp.liege = prev.liege
+		scope:second_temp.liege.liege = prev.liege
+		scope:second_temp.liege.liege.liege = prev.liege
+	}
 	NOR = {
 		scope:second_temp = prev.liege
 		has_variable = petition_title_cooldown
@@ -258,13 +299,13 @@ petition_liege_title_vassal_trigger = {
 			}
 		}
 	}
-	trigger_if = {
-		limit =  { exists = county }
-		NOT = { county = holder.capital_county }
-	}
+	#trigger_if = {
+	#	limit =  { exists = county }
+	#	NOT = { county = holder.capital_county }
+	#}
 	scope:second_temp = {
 		trigger_if = {
-			limit = { has_government = feudal_government }
+			limit = { government_has_flag = government_is_feudal }
 			NOT = { vassal_contract_obligation_level_can_be_decreased = title_revocation_rights }
 		}
 	}
@@ -368,39 +409,39 @@ petition_liege_skiller_trigger = {
 	
 	trigger_if = {
 		limit = { exists = scope:second_party }
-		NOT = { THIS = scope:second_party }
+		NOT = { this = scope:second_party }
 	}
 	trigger_if = {
 		limit = { exists = scope:vassal_claimant }
-		NOT = { THIS = scope:vassal_claimant }
+		NOT = { this = scope:vassal_claimant }
 	}
 	trigger_if = {
 		limit = { exists = scope:second_councillor }
-		NOT = { THIS = scope:second_councillor }
+		NOT = { this = scope:second_councillor }
 	}
 	trigger_if = {
 		limit = { exists = scope:diplomacy_check }
-		NOT = { THIS = scope:diplomacy_check }
+		NOT = { this = scope:diplomacy_check }
 	}
 	trigger_if = {
 		limit = { exists = scope:martial_check }
-		NOT = { THIS = scope:martial_check }
+		NOT = { this = scope:martial_check }
 	}
 	trigger_if = {
 		limit = { exists = scope:stewardship_check }
-		NOT = { THIS = scope:stewardship_check }
+		NOT = { this = scope:stewardship_check }
 	}
 	trigger_if = {
 		limit = { exists = scope:intrigue_check }
-		NOT = { THIS = scope:intrigue_check }
+		NOT = { this = scope:intrigue_check }
 	}
 	trigger_if = {
 		limit = { exists = scope:learning_check }
-		NOT = { THIS = scope:learning_check }
+		NOT = { this = scope:learning_check }
 	}
 	trigger_if = {
 		limit = { exists = scope:petition_vassal }
-		NOT = { THIS = scope:petition_vassal }
+		NOT = { this = scope:petition_vassal }
 	}
 }
 
@@ -408,36 +449,51 @@ petition_liege_skiller_trigger = {
 petition_liege_has_main_skiller_trigger = { 
 	scope:petition_liege = {
 		OR = {
-			AND = {
-				exists = cp:councillor_chancellor
+			trigger_if = {
+				limit = { exists = cp:councillor_chancellor }
 				cp:councillor_chancellor = { petition_liege_skiller_trigger = yes }
 			}
-			AND = {
-				exists = cp:councillor_marshal
+			trigger_else = { always = no }
+			
+			trigger_if = {
+				limit = { exists = cp:councillor_marshal }
 				cp:councillor_marshal = { petition_liege_skiller_trigger = yes }
 			}
-			AND = {
-				exists = cp:councillor_steward
+			trigger_else = { always = no }
+
+			trigger_if = {
+				limit = { exists = cp:councillor_steward }
 				cp:councillor_steward = { petition_liege_skiller_trigger = yes }
 			}
-			AND = {
-				exists = cp:councillor_spymaster
+			trigger_else = { always = no }
+
+			trigger_if = {
+				limit = { exists = cp:councillor_spymaster }
 				cp:councillor_spymaster = { petition_liege_skiller_trigger = yes }
 			}
-			AND = {
-				exists = cp:councillor_court_chaplain
+			trigger_else = { always = no }
+
+			trigger_if = {
+				limit = { exists = cp:councillor_court_chaplain }
 				cp:councillor_court_chaplain = { petition_liege_skiller_trigger = yes }
 			}
-			AND = {
-				is_married = yes
+			trigger_else = { always = no }
+
+			trigger_if = {
+				limit = {
+					is_married = yes
+					exists = primary_spouse
+				}
 				primary_spouse = {
 					is_landed = no 
 					petition_liege_skiller_trigger = yes
+					exists = scope:petition_vassal
 					NOT = {
-						any_relation = { THIS = scope:petition_vassal }
+						any_relation = { this = scope:petition_vassal }
 					}
 				}
 			}
+			trigger_else = { always = no }
 		}
 	}
 }
@@ -467,6 +523,7 @@ petition_liege_skillcheck_limit = {
 		exists = scope:learning_check
 	}
 }
+
 # Character is valid councillor and invalid wildcard
 petition_liege_skiller_no_wildcard_trigger = {
 	petition_liege_skiller_trigger = yes
@@ -509,19 +566,7 @@ petition_liege_valid_trigger = {
 	has_variable = petition_liege_scope
 	liege = var:petition_liege_scope
 	var:petition_liege_scope = {
-		is_available = yes
-		has_royal_court = yes
-	}
-}
-
-# Homage is still valid
-pay_homage_valid_trigger = {
-	is_alive = yes
-	is_imprisoned = no
-	has_variable = homage_liege_scope
-	liege = var:homage_liege_scope
-	var:homage_liege_scope = {
-		is_available = yes
+		is_imprisoned = no
 		has_royal_court = yes
 	}
 }
@@ -559,3 +604,55 @@ adventurer_potential_destination_distance_check = {
 		}
 	}
 }
+
+activity_invite_rule_trigger = {
+	is_adult = yes
+	is_imprisoned = no
+	in_diplomatic_range = root
+}
+
+considers_social_presence_a_gift_to_other_trigger = {
+	has_trait = improvident
+	OR = {
+		has_trait = gregarious
+		has_trait = arrogant
+	}
+}
+
+not_hosting_a_murder_feast = {
+	trigger_if = {
+		limit = {
+			this = scope:host
+			scope:activity = {
+				has_activity_type = activity_feast
+			}
+		}
+		scope:activity = {
+			NOT = {
+				has_activity_option = {
+					category = special_type
+					option = feast_type_murder
+				}
+			}
+		}
+	}
+	trigger_else = {
+		always = yes
+	}
+}
+
+factor_zero_if_entitled_to_freebie_activity_trigger = {
+	dynasty ?= { has_dynasty_perk = ep2_activities_legacy_5 }
+	this = house.house_head
+	NOT = { has_variable = ep2_activities_legacy_5_had_freebie }
+}
+
+# to be run in activity scope
+has_attending_activity_guests = {
+	# We have more than one attending character
+	# Host always attends so we ignore them
+	any_attending_character = {
+		count > 1 # 1 includes the host who always attends
+	}
+}
+

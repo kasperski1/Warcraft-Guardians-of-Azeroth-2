@@ -2,6 +2,7 @@
 friendliness_opinion = {
 	monthly_change = 0.1
 	decaying = yes
+	stacking = yes
 }
 
 respect_opinion = {
@@ -32,6 +33,7 @@ cruelty_opinion = {
 love_opinion = {
 	monthly_change = 0.05
 	decaying = yes
+	stacking = yes
 }
 
 compliment_opinion = {
@@ -40,6 +42,11 @@ compliment_opinion = {
 }
 
 hate_opinion = {
+	monthly_change = 0.05
+	decaying = yes
+}
+
+irritated_opinion = {
 	monthly_change = 0.05
 	decaying = yes
 }
@@ -62,6 +69,7 @@ impious_opinion = {
 suspicion_opinion = {
 	monthly_change = 0.1
 	decaying = yes
+	stacking = yes
 }
 
 trust_opinion = {
@@ -99,6 +107,11 @@ romance_opinion = {
 	decaying = yes
 }
 
+blew_off_some_steam_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
 weak_opinion = {
 	monthly_change = 0.1
 	decaying = yes
@@ -115,6 +128,11 @@ impressed_opinion = {
 }
 
 flattered_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+flustered_opinion = {
 	monthly_change = 0.1
 	decaying = yes
 }
@@ -153,6 +171,42 @@ annoyed_opinion = {
 	monthly_change = 0.1
 	decaying = yes
 }
+
+frustrated_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+overreaction_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+admiration_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+confusion_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+commiseration_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+gloating_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+estranged_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
 given_luxuries_opinion = {
 	monthly_change = 0.1
 	decaying = yes
@@ -194,6 +248,11 @@ unfriendly_opinion = {
 }
 
 gift_opinion = {
+	monthly_change = 0.25
+	decaying = yes
+}
+
+gift_artifact_opinion = {
 	monthly_change = 0.25
 	decaying = yes
 }
@@ -263,6 +322,11 @@ friendly_interaction = {
 	decaying = yes
 }
 
+pet_pet = {
+	monthly_change = 0.25
+	decaying = yes
+}
+
 #Tea ceremony opinions
 opinion_welcomed_with_tea = {
 	opinion = 20
@@ -305,8 +369,8 @@ childhood_victim = {
 }
 
 supportive_parent = {
-	opinion = 5
-	years = 2
+	opinion = 20
+	years = 15
 	decaying = yes
 }
 
@@ -522,6 +586,12 @@ loyal_servant = {
 	opinion = 50
 }
 
+distrustful = {
+	opinion = -35
+	years = 50
+	decaying = yes
+}
+
 was_spared = {
 	opinion = 40
 	years = 10
@@ -679,6 +749,149 @@ sided_with_tyrant_opinion = {
 opinion_of_predecessor = {
 	years = 5
 	decaying = yes
+}
+
+promise_to_predecessor = {
+	years = 10
+	decaying = yes
+}
+
+preferred_heir_opinion = {
+	opinion = 30
+	years = 10
+	decaying = yes
+}
+
+unpreferred_heir_opinion = {
+	opinion = -20
+	years = 10
+	decaying = yes
+}
+
+courtly_title_creation_opinion = {
+	opinion = 15
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+courtly_lowborn_grant_opinion = {
+	opinion = -10
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+courtly_disinherit_opinion = {
+	opinion = -20
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+courtly_court_position_opinion = {
+	opinion = 10
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+glory_hound_approves_war_victory_opinion = {
+	opinion = 10
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+glory_hound_disapproves_war_white_peace_opinion = {
+	opinion = -10
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+glory_hound_disapproves_war_defeat_opinion = {
+	opinion = -20
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+parochial_approves_holding_construction_opinion = {
+	opinion = 20
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+parochial_approves_holding_upgrade_opinion = {
+	opinion = 10
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+parochial_disapproves_strong_war_enemy_opinion = {
+	opinion = -10
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+zealot_approves_temple_construction_opinion = {
+	opinion = 30
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+zealot_approves_temple_upgrade_opinion = {
+	opinion = 15
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+zealot_disapproves_of_asking_hof_for_gold_opinion = {
+	opinion = -10
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+zealot_approves_of_learning_language_opinion = {
+	opinion = 10
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+zealot_approves_of_religious_display_opinion = {
+	opinion = 10
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+zealot_disapproves_of_cynicism_opinion = {
+	opinion = -10 
+	years = 10 
+	decaying = yes 
+	stacking = yes
+}
+
+minority_disapproves_of_conversion_opinion = {
+	opinion = -20
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+barons_and_minor_landholders_disapproves_baron_revocations_opinion = {
+	opinion = -20
+	years = 10
+	decaying = yes
+	stacking = yes
 }
 
 kicked_me_from_court = {
@@ -850,6 +1063,11 @@ employer_opinion = {
 	opinion = 20
 }
 
+abused_position_of_trust_opinion = {
+	monthly_change = 0.2
+	decaying = yes
+}
+
 held_retinue_party_opinion = {
 	opinion = 20
 	years = 1
@@ -880,5 +1098,95 @@ revoked_court_position_opinion = {
 
 contempt_opinion = {
 	monthly_change = 0.05
+	decaying = yes
+}
+
+surgically_maimed = {
+	opinion = -30
+	years = 10
+	decaying = yes
+}
+
+loyalty_opinion = {
+	opinion = 25
+	years = 10
+	decaying = yes
+}
+wounded_me = {
+	opinion = -20
+	years = 10
+	decaying = yes
+}
+
+cheater_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+threatened_opinion = {
+	opinion = -10
+	years = 10
+	decaying = yes
+}
+
+accused_crime_opinion = {
+	opinion = -20
+	years = 10
+	decaying = yes
+}
+
+spurned_gift_opinion = {
+	opinion = -10
+	years = 5
+	decaying = yes
+}
+
+saved_my_life_opinion = {
+	opinion = 40
+	years = 20
+	decaying = yes
+}
+
+accidentally_killed_family_opinion = {
+	opinion = -15
+	years = 20
+	decaying = yes
+}
+
+murder_feast_family_opinion = {
+	opinion = -20
+	years = 20
+	decaying = yes
+}
+
+bloody_wedding_family_opinion = {
+	opinion = -30
+	years = 20
+	decaying = yes
+}
+
+left_family_for_dead_opinion = {
+	opinion = -15
+	years = 20
+	decaying = yes
+}
+
+passed_me_over_for_regent_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+designated_bad_regent_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+designated_me_regent_opinion = {
+	opinion = 30
+	# Remember to sync this to DESIGNATE_DIARCH_INTERVAL_DAYS so that we don't have anyone happy they got the job after they were fired from the job.
+	years = 10
+	decaying = yes
+}
+
+emulating_culture_opinion = {
+	monthly_change = 0.1
 	decaying = yes
 }

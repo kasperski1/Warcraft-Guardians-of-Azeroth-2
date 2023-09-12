@@ -111,12 +111,12 @@ councillor_spouse_intrigue.0001 = {
 					factor = 0 
 					scope:councillor = { 
 						NOT = { 
-							might_cheat_on_partner_trigger = { PARTNER = scope:target_spouse } 
+							might_cheat_on_partner_trigger = { PARTNER = root } 
 						}
 					}
 				}
 				scope:councillor = {
-					set_relation_lover = scope:spymaster
+					set_relation_lover = { reason = lover_web_of_intrigue target = scope:spymaster involved_character = root }
 				}
 			}
 		}
@@ -1515,8 +1515,9 @@ scripted_trigger councillor_spouse_intrigue_1006_plant_trigger = {
 }
 
 scripted_trigger councillor_spouse_intrigue_1006_scheme_target_trigger = {
-	court_owner = {
-		NOT = { this = scope:councillor }
+	trigger_if = {
+		limit = { exists = court_owner }
+		NOT = { court_owner = scope:councillor }
 	}
 }
 

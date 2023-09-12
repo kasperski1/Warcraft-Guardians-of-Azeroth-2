@@ -30,7 +30,8 @@ petition_liege_0101_first_seat_effect = {
 		scope:second_party = {
 			progress_towards_rival_effect = {
 				CHARACTER = scope:petition_vassal
-				OPINION = no
+				REASON = rival_council_seat
+				OPINION = 0
 			}
 			add_opinion = {
 				target = scope:petition_vassal
@@ -129,7 +130,8 @@ petition_liege_0101_second_seat_effect = {
 		scope:second_councillor = {
 			progress_towards_rival_effect = {
 				CHARACTER = scope:petition_vassal
-				OPINION = no
+				REASON = rival_council_seat
+				OPINION = 0
 			}
 			add_opinion = {
 				target = scope:petition_vassal
@@ -543,7 +545,7 @@ petition_liege_0101_title_liege_effect = {
 		add_claim_on_loss = no
 	}
 	scope:petition_claim = {
-		change_title_holder = {
+		change_title_holder_include_vassals = {
 			holder = scope:petition_vassal
 			change = scope:change
 		}
@@ -596,7 +598,8 @@ petition_liege_0101_title_vassal_effect = {
 	scope:second_party = {
 		progress_towards_rival_effect = {
 			CHARACTER = scope:petition_vassal
-			OPINION = no
+			REASON = rival_council_seat
+			OPINION = 0
 		}
 		add_opinion = {
 			target = scope:petition_vassal
@@ -678,7 +681,7 @@ petition_liege_0101_construct_city_effect = {
 				show_as_tooltip = {
 					scope:petition_construct = {
 						begin_create_holding = {
-			  				type = church_holding
+			  				type = city_holding
 			  				refund_cost = { gold = 0 }
 			  			}
 					}
@@ -890,9 +893,9 @@ petition_skill_duel_lose_effect = {
 	send_interface_toast = {
 		title = petition_liege.0401.failure
 		left_icon = scope:petition_liege
-		show_as_tooltip = {
-			activity = { complete_activity = yes }
-		}
+		#show_as_tooltip = {
+		#	activity = { complete_activity = yes }
+		#}
 	}
 }
 

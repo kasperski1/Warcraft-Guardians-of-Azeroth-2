@@ -103,7 +103,12 @@ court_trait_save_scopes_and_send_interface_message_effect = {
 						type = event_generic_good
 						title = courtier_gained_court_type_trait_title
 						right_icon = scope:courtier
-						scope:courtier = { add_trait = $COURT_TYPE$_court_2 }			
+						scope:courtier = {
+							change_trait_rank = {
+								trait = $COURT_TYPE$_court
+								rank = 1
+							}
+						}		
 					}
 				}
 			}
@@ -148,7 +153,12 @@ court_trait_save_scopes_and_send_interface_message_effect = {
 						type = event_generic_good
 						title = courtier_gained_court_type_trait_title
 						right_icon = scope:courtier
-						scope:courtier = { add_trait = $COURT_TYPE$_court_1 }			
+						scope:courtier = {
+							change_trait_rank = {
+                                trait = $COURT_TYPE$_court
+                                rank = 1
+                            }
+						}	
 					}
 				}
 			}
@@ -183,7 +193,10 @@ assign_court_type_traits_to_courtiers_effect = {
 	# Warlike Court
 	if = {
 		limit = {
-			has_court_type = court_warlike
+			OR = {
+				has_court_type = court_warlike
+				has_court_type = court_tribal
+			}
 			any_courtier = {
 				days_since_joined_court >= days_to_gain_court_type_trait
 				OR = { #Either they have no trait, or they have one we can level
