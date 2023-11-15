@@ -430,7 +430,35 @@ task_genocide = {
 	monthly_on_action = task_convert_side_effects
 
 	ai_will_do = {
-		value = 1001 # Always convert if possible
+
+        value = 1
+
+        if = { 
+            limit = { 
+                scope:councillor_liege = { government_has_flag = government_dark_frenzy_from_conversions }
+            }
+
+            add = 1000
+        } 
+        
+        else_if = { 
+            limit = { 
+                scope:councillor.religion = { 
+                    has_doctrine = special_doctrine_end_justifies_means
+                }
+            }
+
+            add = 500
+
+            if = { 
+                limit = { 
+                    scope:councillor_liege = { 
+                        monthly_character_income >= 4
+                    }
+                }
+                add = 500
+            }
+        }
 
 	}
 }
