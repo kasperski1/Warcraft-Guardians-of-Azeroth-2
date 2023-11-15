@@ -1,0 +1,20 @@
+
+# Chaplain Genocide Values 
+
+court_chaplain_genocide_base = { 
+    add = 0.2
+}
+
+court_chaplain_genocide_monthy_increase = { 
+    add = leaning
+    add = martial
+    divide = 60
+}
+
+
+# Genocide Cultural Effects Values 
+
+culture_genocide_acceptance_impact = { 
+    value = culture_conversion_acceptance_impact
+    multiply = 2
+}
