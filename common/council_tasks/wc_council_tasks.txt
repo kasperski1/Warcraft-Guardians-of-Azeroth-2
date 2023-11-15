@@ -356,6 +356,7 @@ task_genocide = {
 
 		scope:county = {
 			set_county_faith = scope:councillor.faith
+            change_development_level = 1
 		}
 
         # Character flag block from Promote Culture
