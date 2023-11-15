@@ -236,20 +236,6 @@ task_genocide = {
 				desc = GAME_RULE_SIGNIFICANTLY_FASTER_REASON
 			}
 		}
-
-		if = {
-			limit = {
-				exists = scope:county
-
-				# Warcraft
-				scope:councillor.faith = { is_syncretic_with_faith = { FAITH = scope:county.faith } }
-
-			}
-			min = {
-				value = 0.1
-				desc = minimum_conversion
-			}
-		}
 	}
 
 	potential_county = { 
