@@ -71,8 +71,9 @@ task_genocide = {
 			value = scope:councillor.court_chaplain_genocide_monthy_increase
 			desc = SCALED_COUNCILLOR_LEARNING_VALUE
 		}
+       
 		#Fervor of Court Chaplain's Faith
-		if = {
+	    if = {
 			limit = { # Conditional in order to not mess up the preview-tooltip
 				exists = scope:county
 				exists = scope:councillor.faith	
@@ -98,6 +99,14 @@ task_genocide = {
 				desc = COURT_CHAPLAIN_CONVERSION_FERVOR_IMPACT
 			}
 		}
+
+        if = { 
+            limit = { 
+                scope:councillor_liege = { government_has_flag = government_dark_frenzy_from_conversions }
+            }
+            add = dark_frenzy_percent_value
+        }
+
 		add = court_chaplain_conversion_contextual_bonuses
 
 		# Warcraft		
@@ -347,7 +356,6 @@ task_genocide = {
 
 		scope:county = {
 			set_county_faith = scope:councillor.faith
-            
 		}
 
         # Character flag block from Promote Culture
@@ -420,7 +428,7 @@ task_genocide = {
 	monthly_on_action = task_convert_side_effects
 
 	ai_will_do = {
-		value = 1000 # Always convert if possible
+		value = 1001 # Always convert if possible
 
 	}
 }

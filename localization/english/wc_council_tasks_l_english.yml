@@ -6,3 +6,7 @@
  COURT_CHAPLAIN_FABRICATE_CLAIM_INNOVATION_BONUS_EXPANSIONISM:1 "[councillor_liege.GetCulture.GetName] — $innovation_expansionism$"
 
  task_dark_frenzy_gain:0 "\n$TAB$Grants [dark_frenzy|E]"
+
+ #court chaplain
+
+ GENOCIDE_DARK_FRENZY_BONUS:0 "[dark_frenzy|E] Bonus"
