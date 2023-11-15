@@ -8,7 +8,7 @@ court_chaplain_genocide_base = {
 court_chaplain_genocide_monthy_increase = { 
     add = leaning
     add = martial
-    divide = 60
+    divide = 50
 }
 
 
