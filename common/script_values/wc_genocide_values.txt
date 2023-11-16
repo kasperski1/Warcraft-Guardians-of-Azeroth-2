@@ -1,4 +1,4 @@
-
+﻿
 # Chaplain Genocide Values 
 
 court_chaplain_genocide_base = { 
@@ -6,9 +6,14 @@ court_chaplain_genocide_base = {
 }
 
 court_chaplain_genocide_monthy_increase = { 
-    add = leaning
-    add = martial
-    divide = 50
+    add = { 
+        value = learning
+        divide = 20
+    }   
+    add ={ 
+        value = martial
+        divide = 20
+    }
 }
 
 
