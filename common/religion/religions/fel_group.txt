@@ -256,7 +256,7 @@
 
 			doctrine = tenet_sacred_shadows
 			doctrine = tenet_unrelenting_faith
-			doctrine = tenet_carnal_exaltation
+			doctrine = tenet_fp3_fedayeen
 
 			holy_order_names = {
 				{ name = "holy_order_the_black_harvest" }
