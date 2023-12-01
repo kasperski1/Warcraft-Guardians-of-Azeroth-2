@@ -31,18 +31,19 @@
 	doctrine = doctrine_order_magic_accepted
 	doctrine = doctrine_life_magic_ignored
 	doctrine = doctrine_death_magic_crime
-	doctrine = doctrine_elemental_spirit_magic_accepted
-	doctrine = doctrine_elemental_decay_magic_shunned
-	doctrine = doctrine_elemental_fire_magic_accepted
-	doctrine = doctrine_elemental_water_magic_accepted
-	doctrine = doctrine_elemental_air_magic_accepted
-	doctrine = doctrine_elemental_earth_magic_accepted
+	doctrine = doctrine_elemental_fire_spirit_magic_accepted
+	doctrine = doctrine_elemental_water_spirit_magic_accepted
+	doctrine = doctrine_elemental_air_spirit_magic_accepted
+	doctrine = doctrine_elemental_earth_spirit_magic_accepted
 
 	#Clerical Functions
 	doctrine = doctrine_clerical_function_taxation
 	doctrine = doctrine_clerical_gender_either
 	doctrine = doctrine_clerical_marriage_disallowed
 	doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
+	
+	#Allow pilgrimages
+	doctrine = doctrine_pilgrimage_encouraged
 
 	# Placeholder
 	traits = {
@@ -70,7 +71,7 @@
 		# Elephant
 		custom_faith_5
 		# Circle
-		christianity_bogomilist
+		christianity_bogomilist custom_faith_boromian_circles
 		# Key
 		christianity_paulicanism
 		# Sun
@@ -240,6 +241,7 @@
 		DeathDeityHerHis = CHARACTER_HERHIS_HIS
 		
 		WitchGodName = UNSEEN_GUESTS_NAME
+		WitchGodNamePossessive  = UNSEEN_GUESTS_POSSESSIVE
 		WitchGodHerHis = CHARACTER_HERHIS_THEIR
 		WitchGodSheHe = CHARACTER_SHEHE_THEY
 		WitchGodHerHim = CHARACTER_HERHIM_THEM
@@ -296,8 +298,6 @@
 			#Magic
 			doctrine = doctrine_order_magic_crime
 			doctrine = doctrine_life_magic_crime
-			doctrine = doctrine_elemental_spirit_magic_crime
-			doctrine = doctrine_elemental_decay_magic_crime
 			doctrine = doctrine_elemental_fire_magic_crime
 			doctrine = doctrine_elemental_water_magic_crime
 			doctrine = doctrine_elemental_air_magic_crime

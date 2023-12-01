@@ -2,11 +2,11 @@
 	604.1.12={
 		holder=210000 #Cairne[116000]
 	}
-	605.5.20={
-		effect = {
-			holder = { join_pol_faction_effect = { faction = horde } }
-		}
-	}
+	#605.5.20={
+	#	effect = {
+	#		holder = { join_this_union_flag_effect = { faction = horde give_modifiers = no } }
+	#	}
+	#}
 }
 d_thunder_bluff = {
 	26.1.1={holder=250187} #Ungilmi[119002]
@@ -195,6 +195,8 @@ c_thornsnarl = {
 	595.09.13={holder=160085} #Brikk[112000]
 }
 d_bravewind = {
+	1.1.1 = {
+	}
 }
 c_bravewind = {
 	1.1.1={
@@ -270,6 +272,8 @@ c_monolith_glen = {
 	604.1.12={holder=210048} #Bena[1160014]
 }
 d_shaibi = {
+	1.1.1 = {
+	}
 }
 c_bloodhoof = {
 	1.1.1={

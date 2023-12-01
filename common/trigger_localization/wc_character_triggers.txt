@@ -1,5 +1,6 @@
-﻿can_have_sexual_relation_with_trigger_tooltip = {
-	first_not = can_have_sexual_relation_with_trigger_tooltip_first_not
+﻿can_have_sexual_relation_with_tooltip = {
+	first = can_have_sexual_relation_with_tooltip_first
+	first_not = can_have_sexual_relation_with_tooltip_first_not
 }
 is_dragon_race_tooltip = {
 	global = is_dragon_race_tooltip_global
@@ -64,4 +65,34 @@ has_trait_with_flag_can_not_romance = {
 	global = has_trait_with_flag_can_not_romance_global
 	first = has_trait_with_flag_can_not_romance_first
 	third = has_trait_with_flag_can_not_romance_third
+}
+
+has_trait_with_flag_no_aging_penalties = {
+	global = has_trait_with_flag_no_aging_penalties_global
+	global_not = has_trait_with_flag_no_aging_penalties_global_not
+	first = has_trait_with_flag_no_aging_penalties_first
+	first_not = has_trait_with_flag_no_aging_penalties_first_not
+	third = has_trait_with_flag_no_aging_penalties_third
+	third_not = has_trait_with_flag_no_aging_penalties_third_not
+}
+has_trait_with_flag_wc_adoption = {
+	global = has_trait_with_flag_wc_adoption_global
+	global_not = has_trait_with_flag_wc_adoption_global_not
+	first = has_trait_with_flag_wc_adoption_first
+	first_not = has_trait_with_flag_wc_adoption_first_not
+	third = has_trait_with_flag_wc_adoption_third
+	third_not = has_trait_with_flag_wc_adoption_third_not
+}
+has_trait_with_flag_titanforged_class = {
+	global = has_trait_with_flag_titanforged_class_global
+	global_not = has_trait_with_flag_titanforged_class_global_not
+	first = has_trait_with_flag_titanforged_class_first
+	first_not = has_trait_with_flag_titanforged_class_first_not
+	third = has_trait_with_flag_titanforged_class_third
+	third_not = has_trait_with_flag_titanforged_class_third_not
+}
+found_empire_decision_two_kingdoms_held = {
+	global = HOLDS_TWO_OR_MORE_KINGDOM_TITLES_TRIGGER
+	first = I_HOLD_TWO_OR_MORE_KINGDOM_TITLES_TRIGGER
+	third = THEY_HOLD_TWO_OR_MORE_KINGDOM_TITLES_TRIGGER
 }

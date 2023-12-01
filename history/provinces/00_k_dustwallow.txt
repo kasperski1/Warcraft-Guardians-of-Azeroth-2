@@ -278,7 +278,7 @@
 
 	605.1.1={
 		culture = ogre
-		religion = primitive_shamanism
+		religion = gorgog_worship
 	}
 }
 
@@ -324,6 +324,7 @@
 	culture = black_dragon
 	religion = nzoth_worship
 	holding = castle_holding
+	special_building = onyxias_lair_01
 }
 
 5421 = {	# Tehya
@@ -425,7 +426,7 @@
 
 	605.1.1={
 		culture = ogre
-		religion = primitive_shamanism
+		religion = gorgog_worship
 	}
 }
 
@@ -442,7 +443,7 @@
 
 	605.1.1={
 		culture = ogre
-		religion = primitive_shamanism
+		religion = gorgog_worship
 	}
 }
 

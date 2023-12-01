@@ -31,13 +31,20 @@
 	martial=7 diplomacy=7 stewardship=8 intrigue=6 learning=8
 	trait=education_martial_3 trait=patient trait=arrogant trait=just trait=diligent
 	disallow_random_traits = yes
-	1.1.1={ birth=yes trait=creature_high_elf effect = { make_important_lore_character_effect = yes } }
+	2.1.1={ 
+		birth=yes trait=creature_high_elf 
+		effect = { make_important_lore_character_effect = yes }
+	}
 	16.1.1={
 		add_prestige = 6000
 		effect={
-			set_variable = { name = wc_warrior_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
+			learn_language = language_common
 		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_2
 		# create_bloodline = {
 			# type = dathremar
 		# }
@@ -63,17 +70,21 @@
 	# Likes ventures
 	disallow_random_traits = yes
 	father=42002	#Anasterian
-	21.12.3={ birth=yes trait=creature_high_elf effect = { make_important_lore_character_effect = yes } }
+	21.12.3={ 
+		birth=yes trait=creature_high_elf 
+		effect = { make_important_lore_character_effect = yes }
+	}
 	37.12.3={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 }
-			set_variable = { name = wc_elemental_fire_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value }
+			set_variable = { name = wc_elemental_fire_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value }
 		}
 		trait=shrewd # Described as shrewd
 	}
 	583.1.1={
 		employer=59000	# Dalaran
 		give_council_position = councillor_chancellor
+		effect = { learn_language = language_common }
 	}
 	596.2.13={
 		trait=wrathful
@@ -194,9 +205,16 @@
 	dynasty=20004
 	culture=high_elf religion=cult_of_sunwell
 	martial=4 diplomacy=5 stewardship=4 intrigue=6 learning=5
-	trait=education_intrigue_4 trait=mystic_2 trait=content trait=compassionate trait=trusting
+	trait=education_intrigue_4 trait=lifestyle_mystic trait=content trait=compassionate trait=trusting
 	trait=chaste
-	243.2.19={ birth=yes trait=creature_high_elf }
+	243.2.19={ birth=yes trait=creature_high_elf
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	603.7.5={
 		death = {
 			death_reason = death_battle
@@ -469,10 +487,18 @@
 	dynasty=20008
 	culture=high_elf religion=cult_of_sunwell
 	martial=6 diplomacy=8 stewardship=4 intrigue=8 learning=7
-	trait=education_diplomacy_4 trait=hunter_2 trait=arrogant trait=arbitrary trait=generous
+	trait=education_diplomacy_4 trait=lifestyle_hunter trait=arrogant trait=arbitrary trait=generous
 	trait=wrathful
 	father=42029	#Rahir
-	322.1.18={ birth=yes trait=creature_high_elf }
+	322.1.18={ birth=yes trait=creature_high_elf
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = 50
+			}
+		}
+	}
 	603.8.1={
 		death = {
 			death_reason = death_battle
@@ -484,9 +510,16 @@
 	dynasty=20008
 	culture=high_elf religion=cult_of_sunwell
 	martial=5 diplomacy=6 stewardship=7 intrigue=4 learning=8
-	trait=education_learning_3 trait=reveler_2 trait=gluttonous trait=cynical trait=content
+	trait=education_learning_3 trait=lifestyle_reveler trait=gluttonous trait=cynical trait=content
 	father=42029	#Rahir
-	381.11.25={ birth=yes trait=creature_high_elf }
+	381.11.25={ birth=yes trait=creature_high_elf
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	603.10.1={
 		culture=blood_elf
 	}
@@ -497,10 +530,17 @@
 	dynasty=20008
 	culture=high_elf religion=cult_of_sunwell
 	martial=7 diplomacy=6 stewardship=8 intrigue=5 learning=6
-	trait=education_martial_1 trait=reveler_2 trait=arrogant trait=wrathful 
+	trait=education_martial_1 trait=lifestyle_reveler trait=arrogant trait=wrathful 
 	trait=ambitious
 	father=42030	#Qumailan
-	291.11.14={ birth=yes trait=creature_high_elf }
+	291.11.14={ birth=yes trait=creature_high_elf
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	603.10.1={
 		culture=blood_elf
 	}
@@ -1024,13 +1064,22 @@
 	dna=lorthemar_theron_dna
 	dynasty=20015
 	culture=high_elf religion=cult_of_sunwell
+	sexuality = heterosexual
 	martial=8 diplomacy=6 stewardship=8 intrigue=3 learning=5
 	trait=education_martial_3 trait=honest trait=content trait=gregarious trait=patient
 	trait=shrewd
 	disallow_random_traits = yes
-	40.10.9={ birth=yes trait=creature_high_elf effect = { make_important_lore_character_effect = yes } }
+	40.10.9={ 
+		birth=yes trait=creature_high_elf 
+		effect = { make_important_lore_character_effect = yes }
+	}
 	98.10.9={
-		effect={ set_variable = { name = wc_hunter_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_4
+		# trait=physical_lifestyle_dexterity_4
 	}
 	603.10.1={
 		culture=blood_elf
@@ -1056,6 +1105,7 @@
 	dynasty=20016
 	dna=sylvanas_windrunner_dna
 	culture=high_elf religion=cult_of_sunwell
+	sexuality = heterosexual
 	martial=6 diplomacy=4 stewardship=6 intrigue=5 learning=5
 	trait=education_martial_4
 	trait=unyielding_defender
@@ -1065,11 +1115,19 @@
 	#She gave gold coin to Stephon Marris, cousin of Nathanos
 	#Sacrificed herself
 	disallow_random_traits = yes
-	father=42085	#Caemis
+	father=42085	#Verath
 	mother=42303	#Lireesa
-	211.10.26={ birth=yes trait=creature_high_elf effect = { make_important_lore_character_effect = yes } }
+	211.10.26={ 
+		birth=yes trait=creature_high_elf 
+		effect = { make_important_lore_character_effect = yes }
+	}
 	227.10.26={
-		effect={ set_variable = { name = wc_hunter_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_4
+		# trait=physical_lifestyle_dexterity_4
 		trait=shrewd
 	}
 	550.1.1={
@@ -1080,8 +1138,9 @@
 	}
 	603.7.11={
 		trait=being_undead
-		effect={ set_variable = { name = wc_death_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value days = 10 } }
-		religion=death_god
+		effect={ set_variable = { name = wc_death_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value } }
+		religion = death_god
+		culture = scourge
 		trait=callous #The Scourge corrupted her
 		give_nickname=nick_the_banshee
 	}
@@ -1091,21 +1150,43 @@
 		add_gold = 300 #Military budget
 
 		# Claims Balnazzar's lands in Lordaeron
-		add_pressed_claim=k_lordaeron
-		add_pressed_claim=c_lordaeron
-		add_pressed_claim=c_balnir
-		add_pressed_claim=c_bastion
+		add_pressed_claim=title:k_lordaeron
+		add_pressed_claim=title:c_lordaeron
+		add_pressed_claim=title:c_balnir
+		add_pressed_claim=title:c_bastion
 		# Claims Windrunner estate
-		add_pressed_claim=d_shalandis
-		add_pressed_claim=c_windrunner
-		add_pressed_claim=c_silverfury
-		add_pressed_claim=c_ghost_forest
-		add_pressed_claim=c_rest_hollow
-		add_pressed_claim=c_underlight
+		add_pressed_claim=title:d_shalandis
+		add_pressed_claim=title:c_windrunner
+		add_pressed_claim=title:c_silverfury
+		add_pressed_claim=title:c_ghost_forest
+		add_pressed_claim=title:c_rest_hollow
+		add_pressed_claim=title:c_underlight
 		effect = {
 			set_relation_rival = character:60003 #Arthas
 			#spawn_colonial_troops_effect = yes
 			#spawn_small_colonial_troops_effect = yes
+			
+			#Prevents hostile schemes by possessed vassals
+			add_hook_no_toast = {
+				target = character:29220	#Snarlhide
+				type = loyalty_hook
+			}
+			add_hook_no_toast = {
+				target = character:52057	#Mug'thol
+				type = loyalty_hook
+			}
+			add_hook_no_toast = {
+				target = character:zulrogg	#Zul'rogg
+				type = loyalty_hook
+			}
+			add_hook_no_toast = {
+				target = character:34051	#Mrrmgrhl
+				type = loyalty_hook
+			}
+			add_hook_no_toast = {
+				target = character:60675	#Blackthorn
+				type = loyalty_hook
+			}
 		}
 	}
 	620.4.5={ death=yes }
@@ -1118,8 +1199,18 @@
 	culture=high_elf religion=cult_of_sunwell
 	martial=7 diplomacy=7 stewardship=4 intrigue=5 learning=5
 	trait=education_martial_4 trait=humble trait=patient trait=honest trait=brave
-	171.5.22={ birth=yes trait=creature_high_elf effect = { make_important_lore_character_effect = yes } }
-	187.5.22={ effect={ set_variable = { name = wc_hunter_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 } } }
+	171.5.22={ 
+		birth=yes trait=creature_high_elf 
+		effect = { make_important_lore_character_effect = yes }
+	}
+	187.5.22={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_3
+		# trait=physical_lifestyle_dexterity_3
+	}
 	603.10.1={
 		culture=blood_elf
 	}
@@ -1147,16 +1238,20 @@
 	martial=5 diplomacy=5 stewardship=8 intrigue=8 learning=5
 	trait=education_learning_3 trait=greedy trait=arrogant trait=deceitful
 	trait=ambitious
-	157.7.19={ birth=yes trait=creature_high_elf effect = { make_important_lore_character_effect = yes } }
+	157.7.19={ 
+		birth=yes trait=creature_high_elf 
+		effect = { make_important_lore_character_effect = yes }
+	}
 	173.7.19={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value }
 		}
 	}
 	603.7.1={
-		religion=death_god
+		religion = death_god
+		culture = scourge
 		effect={
-			set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
+			set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
 			give_nickname=nick_the_betrayer
 		}
 	}
@@ -1249,9 +1344,9 @@
 }
 
 #dynasty=20016	MORE WINDRUNNERS
-# Fathers of the sisters
+# Father of the sisters
 42085={
-	name=Caemis
+	name=Verath		#From Sylvanas novel
 	culture=high_elf religion=cult_of_sunwell
 	martial=5 diplomacy=5 stewardship=6 intrigue=7 learning=7
 	trait=education_martial_4 trait=beauty_good_3
@@ -1259,7 +1354,7 @@
 	565.1.1={
 		add_matrilineal_spouse = 42303
 	}
-	539.7.29={ death=yes }
+	589.6.1={ death=yes }	#Burning of Quel'thalas
 }
 42086={
 	name=Alleria
@@ -1267,20 +1362,30 @@
 	dynasty=20016
 	dna=alleria_windrunner_dna
 	culture=high_elf religion=cult_of_sunwell
+	sexuality = heterosexual
 	martial=5 diplomacy=5 stewardship=5 intrigue=6 learning=5
 	trait=education_martial_4 trait=beauty_good_lore trait=brave trait=diligent trait=stubborn trait=patient trait=rough_terrain_expert
 	disallow_random_traits = yes
-	father=42085	#Caemis
+	father=42085	#Verath
 	mother=42303
-	150.3.22={ birth=yes trait=creature_high_elf }
+	150.3.22={ 
+		birth=yes trait=creature_high_elf 
+		effect = { make_important_lore_character_effect = yes } 
+	}
 	196.3.22={
 		employer=42002 #Anasterian
-		effect={ set_variable = { name = wc_hunter_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			learn_language = language_common
+		}
+		# trait=physical_lifestyle_endurance_3
+		# trait=physical_lifestyle_dexterity_3
 	}
 	588.8.10={
 		add_matrilineal_spouse=60247	#Turalyon
 		effect={
-			set_relation_lover=character:60247			#Turalyon
+			set_relation_soulmate=character:60247			#Turalyon
 		}
 	}
 	591.11.1={ death = { death_reason = death_vanished } }
@@ -1291,24 +1396,35 @@
 	dynasty=20016
 	dna=vereesa_windrunner_dna
 	culture=high_elf religion=cult_of_sunwell
+	sexuality = heterosexual
 	martial=5 diplomacy=7 stewardship=4 intrigue=5 learning=5
 	trait=education_martial_4 trait=beauty_good_lore trait=brave trait=compassionate trait=trusting
 	disallow_random_traits = yes
-	father=42085	#Caemis
+	father=42085	#Verath
 	mother=42303
-	333.10.22={ birth=yes trait=creature_high_elf }
+	333.10.22={ 
+		birth=yes trait=creature_high_elf 
+		effect = { make_important_lore_character_effect = yes }
+	}
 	349.10.26={
 		employer=42002 #Anasterian
-		effect={ set_variable = { name = wc_hunter_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			learn_language = language_common
+		}
+		# trait=physical_lifestyle_endurance_3
+		# trait=physical_lifestyle_dexterity_3
+	}
+	591.4.6={
+		effect = { set_relation_ward = character:42100 }	#Arator
 	}
 	593.1.1={
-		employer=59000 #Antonidas #Moved to Dalaran
+		employer=59000 #Antonidas 		#Moved to Dalaran
 	}
 	594.1.1={
-		add_matrilineal_spouse=59130	#Rhonin
-		effect={
-			set_relation_lover=character:59130			#Rhonin
-		}
+		add_matrilineal_spouse=59130
+		effect = { set_relation_soulmate=character:59130 }	#Rhonin
 	}
 	604.1.1={
 		employer = 59120 # Ansirem Runeweaver
@@ -1321,9 +1437,21 @@
 	dynasty=20016
 	culture=high_elf religion=cult_of_sunwell
 	disallow_random_traits = yes
-	father=42085	#Caemis
+	martial=2 diplomacy=10 stewardship=6 intrigue=4 learning=8
+	trait=charming trait=education_diplomacy_3
+	trait=weak trait=brave trait=gregarious trait=stubborn
+	father=42085	#Verath
 	mother=42303
-	575.7.26={ birth=yes trait=creature_high_elf }
+	568.7.26={ birth=yes trait=creature_high_elf }
+	577.3.17={
+		effect = { set_relation_friend = character:42076 }	#Sylvanas
+	}
+	583.8.21={
+		trait=poet
+	}
+	#603.1.30={
+	#	employer=42003		#Royal Musician for Kael'thas	
+	#}
 	589.6.26={
 		death = { death_reason = death_battle }
 	}
@@ -1338,7 +1466,12 @@
 	2.1.1={ birth=yes trait=creature_high_elf }
 	18.1.1={
 		set_relation_friend = character:42002
-		effect={ set_variable = { name = wc_hunter_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_3
+		# trait=physical_lifestyle_dexterity_3
 	}
 	603.10.1={
 		death = {
@@ -1371,7 +1504,14 @@
 	trait=education_martial_3 trait=compassionate trait=just trait=zealous trait=deceitful
 	father=42090	#Sothis
 	149.12.7={ birth=yes trait=creature_high_elf }
-	165.12.7={ effect={ set_variable = { name = wc_hunter_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 } } }
+	165.12.7={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_3
+		# trait=physical_lifestyle_dexterity_3
+	}
 	603.10.1={
 		culture=blood_elf
 	}
@@ -1393,14 +1533,16 @@
 	200.3.6={ birth=yes trait=creature_high_elf }
 	216.3.6={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
 		}
 	}
 	603.10.1={
 		culture=blood_elf
 	}
-	604.1.1={
+	604.4.14={
 		religion = nzoth_worship # Deferred to void magic?
+		trait=witch
+		effect = { set_relation_nemesis = character:42087 }		#Vereesa
 	}
 	605.4.12={
 		employer = 62201 # Sintharia
@@ -1421,7 +1563,14 @@
 	trait=gregarious
 	father=42090	#Sothis
 	294.5.6={ birth=yes trait=creature_high_elf }
-	466.2.19={ effect={ set_variable = { name = wc_hunter_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 } } }
+	466.2.19={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_dexterity_2
+	}
 	603.10.1={
 		culture=blood_elf
 	}
@@ -1444,8 +1593,8 @@
 	450.2.19={ birth=yes trait=creature_high_elf }
 	466.2.19={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 }
-			set_variable = { name = wc_elemental_fire_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value }
+			set_variable = { name = wc_elemental_fire_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value }
 		}
 	}
 	589.10.26={
@@ -1500,7 +1649,7 @@
 	dynasty=20016
 	culture=high_elf religion=holy_light
 	martial=6 diplomacy=7 stewardship=7 intrigue=5 learning=8
-	trait=education_martial_3
+	trait=pensive trait=education_martial_3
 	trait=diligent trait=just trait=generous trait=brave
 	disallow_random_traits=yes
 	father=60247	#Turalyon
@@ -1512,18 +1661,24 @@
 	591.4.6={
 		employer=42002 #Anasterian Together with his aunt, Vereesa
 	}
-	594.1.1={
+	593.1.1={
 		employer=59000 #Antonidas Together with his aunt, Vereesa
+		effect={
+			learn_language = language_common
+		}
 	}
 	604.1.1={
 		employer=59120 #Ansirem Runeweaver Together with his aunt, Vereesa
 	}
 	607.1.1={
 		effect={
-			set_variable = { name = wc_warrior_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
-			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
-			#effect={set_light_gfx_effect=yes}
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
+			# set_light_gfx_effect=yes
 		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_2
 		give_nickname = nick_the_redeemer
 	}
 	642.9.2={ death=yes }
@@ -1534,16 +1689,17 @@
 	dynasty=20016
 	culture=high_elf religion=cult_of_sunwell
 	martial=8 diplomacy=7 stewardship=5 intrigue=6 learning=6
-	trait=twin
+	trait=twin trait=forgiving
 	father=59130	#Rhonin
 	mother=42087	#Vereesa
-	604.1.1={ birth=yes trait=creature_high_elf }
-	604.1.1={
+	603.3.28={ birth=yes trait=creature_high_elf }
+	603.3.28={
 		employer = 59120 # Ansirem Runeweaver Together with mother
+		effect = { set_relation_guardian = character:42087 learn_language = language_common }
 	}
-	604.1.1={
+	#603.3.28={
 		#trait = blood_human
-	}
+	#}
 	637.12.31={ death=yes }
 }
 42111={
@@ -1551,16 +1707,17 @@
 	dynasty=20016
 	culture=high_elf religion=cult_of_sunwell
 	martial=7 diplomacy=8 stewardship=7 intrigue=8 learning=4
-	trait=twin
+	trait=twin trait=just
 	father=59130	#Rhonin
 	mother=42087	#Vereesa
-	604.1.1={ birth=yes trait=creature_high_elf }
-	604.1.1={
+	603.3.28={ birth=yes trait=creature_high_elf }
+	603.3.28={
 		employer = 59120 # Ansirem Runeweaver Together with mother
+		effect = { set_relation_guardian = character:42087 learn_language = language_common }
 	}
-	604.1.1={
+	#603.3.28={
 		#trait = blood_human
-	}
+	#}
 	653.2.1={ death=yes }
 }
 
@@ -1574,9 +1731,14 @@
 	martial=4 diplomacy=8 stewardship=6 intrigue=7 learning=4
 	trait=education_martial_3
 	trait=diligent trait=content trait=brave
-	1.2.12={ birth=yes trait=creature_high_elf }
+	2.2.12={ birth=yes trait=creature_high_elf }
 	21.1.1={
-		effect={ set_variable = { name = wc_warrior_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_4
+		# trait=physical_lifestyle_strength_4
 	}
 	# Killed by the Scourge
 	603.10.1={
@@ -1691,6 +1853,7 @@
 	name=Qaeyas
 	dynasty=20020
 	culture=high_elf religion=cult_of_sunwell
+	sexuality = heterosexual
 	martial=6 diplomacy=6 stewardship=6 intrigue=6 learning=6
 	trait=education_martial_2
 	trait=intellect_good_2 trait=lustful trait=ambitious trait=lazy trait=deceitful
@@ -1699,11 +1862,18 @@
 	46.1.19={
 		effect={add_patron_trait_character_effect=yes}
 	}
-	66.1.19={ effect={ set_variable = { name = wc_warrior_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 } } }
+	66.1.19={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_4
+		# trait=physical_lifestyle_strength_4
+	}
 	100.1.1={
 		add_spouse=42201
 		effect={
-			set_relation_lover=character:42201
+			set_relation_soulmate=character:42201
 		}
 	}
 	603.10.1={
@@ -1715,15 +1885,23 @@
 	name=Nelea
 	female=yes
 	culture=high_elf religion=cult_of_sunwell
+	sexuality = heterosexual
 	martial=6 diplomacy=6 stewardship=6 intrigue=6 learning=6
 	trait=education_intrigue_3
 	trait=intellect_good_2 trait=humble trait=chaste trait=strategist
 	disallow_random_traits = yes
-	1.1.1={ birth=yes trait=creature_high_elf }
-	1.1.1={
+	2.1.1={ birth=yes trait=creature_high_elf }
+	2.1.1={
 		effect={add_patron_trait_character_effect=yes}
 	}
-	20.1.1={ effect={ set_variable = { name = wc_hunter_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 } } }
+	20.1.1={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_3
+		# trait=physical_lifestyle_dexterity_3
+	}
 	603.10.1={
 		culture=blood_elf
 	}
@@ -1746,7 +1924,7 @@
 	}
 	579.6.23={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
 		}
 	}
 	603.10.1={
@@ -1762,13 +1940,14 @@
 	name=Vynaen
 	dynasty=20022
 	culture=high_elf religion=cult_of_sunwell
+	sexuality = heterosexual
 	martial=7 diplomacy=6 stewardship=5 intrigue=8 learning=8
 	trait=education_diplomacy_3 trait=wrathful trait=generous trait=compassionate trait=lustful 
 	500.10.7={ birth=yes trait=creature_high_elf }
 	550.1.1={
 		add_spouse=42215 #Beledine
 		effect={
-			set_relation_lover=character:42215 #Beledine
+			set_relation_soulmate=character:42215 #Beledine
 		}
 	}
 	# Killed by bandits before the Scourge
@@ -1787,12 +1966,20 @@
 	trait=honest trait=humble trait=diligent trait=beauty_good_3 trait=brave
 	father=42210	#Vynaen
 	mother=42215 #Beledine
-	588.2.9={ birth=yes trait=creature_high_elf }
+	588.2.9={ 
+		birth=yes trait=creature_high_elf 
+		effect = { make_important_lore_character_effect = yes }
+	}
 	603.10.1={
 		culture=blood_elf
 	}
 	605.1.1={
-		effect={ set_variable = { name = wc_rogue_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+		}
+		# trait=physical_lifestyle_dexterity_4
+		# trait=physical_lifestyle_strength_4
 	}
 	#Enslaved by Rehgar
 	725.11.3={ death=yes }
@@ -1803,6 +1990,7 @@
 	name=Beledine
 	female=yes
 	culture=high_elf religion=cult_of_sunwell
+	sexuality = heterosexual
 	549.7.18={ birth=yes trait=creature_high_elf }
 	# Killed by bandits before the Scourge
 	603.1.1={
@@ -1821,17 +2009,14 @@
 	martial=7 diplomacy=6 stewardship=6 intrigue=5 learning=8
 	trait=education_martial_3
 	trait=brave trait=wrathful 
-	1.4.1={ birth=yes trait=creature_high_elf }
+	2.4.1={ birth=yes trait=creature_high_elf }
 	20.1.1={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
 		}
 	}
 	603.10.1={
 		culture=blood_elf
-	}
-	605.4.29={
-		employer=42003 # Kael'thas Sunstrider
 	}
 	620.10.24={ death=yes }
 }
@@ -1846,14 +2031,11 @@
 	300.1.23={ birth=yes trait=creature_high_elf }
 	320.1.1={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
 		}
 	}
 	603.10.1={
 		culture=blood_elf
-	}
-	605.4.29={
-		employer=42003 # Kael'thas Sunstrider
 	}
 	620.7.11={ death=yes }
 }
@@ -1867,15 +2049,12 @@
 	400.6.14={ birth=yes trait=creature_high_elf }
 	420.1.1={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
-			set_variable = { name = wc_elemental_fire_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
+			set_variable = { name = wc_elemental_fire_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value }
 		}
 	}
 	603.10.1={
 		culture=blood_elf
-	}
-	605.4.29={
-		employer=42003 # Kael'thas Sunstrider
 	}
 	620.12.20={ death=yes }
 }
@@ -1891,16 +2070,13 @@
 	100.6.2={ birth=yes trait=creature_high_elf }
 	120.1.1={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value }
 		}
 		trait=scholar
 		give_nickname=nick_the_calculator
 	}
 	603.10.1={
 		culture=blood_elf
-	}
-	605.4.29={
-		employer=42003 # Kael'thas Sunstrider
 	}
 	620.6.6={ death=yes }
 }
@@ -1915,18 +2091,18 @@
 	100.8.21={ birth=yes trait=creature_high_elf }
 	120.1.1={
 		effect={
-			set_variable = { name = wc_warrior_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
-			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
-			#effect={set_light_gfx_effect=yes}
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
+			# set_light_gfx_effect=yes
 		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_2
 		trait=strategist
 		give_nickname=nick_the_shatterer
 	}
 	603.10.1={
 		culture=blood_elf
-	}
-	605.4.29={
-		employer=42003 # Kael'thas Sunstrider
 	}
 	620.2.9={ death=yes }
 }
@@ -1943,14 +2119,16 @@
 	trait=content
 	99.1.22={ birth=yes trait=creature_high_elf }
 	120.1.1={
-		effect={ set_variable = { name = wc_rogue_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+		}
+		# trait=physical_lifestyle_dexterity_4
+		# trait=physical_lifestyle_strength_4
 		trait=schemer
 	}
 	603.10.1={
 		culture=blood_elf
-	}
-	605.4.29={
-		employer=42003 # Kael'thas Sunstrider
 	}
 	620.12.22={ death=yes }
 }
@@ -1966,16 +2144,13 @@
 	99.3.3={ birth=yes trait=creature_high_elf }
 	120.1.1={
 		effect={
-			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 }
-			# effect={set_light_gfx_effect=yes}
+			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value }
+			# set_light_gfx_effect=yes
 		}
 		trait=diplomat
 	}
 	603.10.1={
 		culture=blood_elf
-	}
-	605.4.29={
-		employer=42003 # Kael'thas Sunstrider
 	}
 	740.9.20={ death=yes }
 }
@@ -1990,17 +2165,14 @@
 	100.4.26={ birth=yes trait=creature_high_elf }
 	120.1.1={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 }
-			set_variable = { name = wc_elemental_fire_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 }
-			set_variable = { name = wc_elemental_water_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value }
+			set_variable = { name = wc_elemental_fire_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value }
+			set_variable = { name = wc_elemental_water_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value }
 		}
 		trait=scholar
 	}
 	603.10.1={
 		culture=blood_elf
-	}
-	605.4.29={
-		employer=42003 # Kael'thas Sunstrider
 	}
 	733.12.21={ death=yes }
 }
@@ -2015,7 +2187,7 @@
 	413.5.4={ birth=yes trait=creature_high_elf }
 	429.5.4={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
 		}
 	}
 	589.10.26={ death=yes }
@@ -2064,7 +2236,12 @@
 		employer=60203
 	}
 	597.5.24={
-		effect={ set_variable = { name = wc_rogue_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+		}
+		# trait=physical_lifestyle_dexterity_4
+		# trait=physical_lifestyle_strength_4
 		trait=diligent trait=shrewd trait=gregarious
 		trait=lunatic_1
 	}
@@ -2098,8 +2275,8 @@
 	}
 	601.2.26={
 		effect={
-			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 }
-			# effect={set_light_gfx_effect=yes}
+			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value }
+			# set_light_gfx_effect=yes
 		}
 	}
 	603.10.1={
@@ -2125,7 +2302,12 @@
 	}
 	156.3.22={
 		employer=42002 #Anasterian
-		effect={ set_variable = { name = wc_hunter_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_4
+		# trait=physical_lifestyle_dexterity_4
 		give_council_position = councillor_marshal
 	}
 	589.6.26={ 
@@ -2142,16 +2324,24 @@
 	martial=5 diplomacy=8 stewardship=4 intrigue=5 learning=7
 	trait=education_learning_3
 	trait=intellect_good_2 trait=compassionate trait=patient trait=shrewd
-	1.7.4={ birth=yes trait=creature_high_elf effect = { make_important_lore_character_effect = yes } }
+	2.7.4={ 
+		birth=yes trait=creature_high_elf 
+		effect = { make_important_lore_character_effect = yes }
+	}
 	20.1.1={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value }
 		}
 	}
 	603.10.1={
 		culture=blood_elf
 	}
-	604.1.6={ death=yes }
+	604.1.6={
+		death = {
+			death_reason = death_battle
+			killer = 60003
+		}
+	}
 }
 42305={
 	name=Liadrin
@@ -2168,8 +2358,8 @@
 	526.3.22={
 		employer = 42082
 		effect={
-			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 }
-			# effect={set_light_gfx_effect=yes}
+			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
+			# set_light_gfx_effect=yes
 		}
 	}
 	603.10.1={
@@ -2183,11 +2373,14 @@
 	culture=high_elf religion=cult_of_sunwell
 	martial=6 diplomacy=5 stewardship=4 intrigue=5 learning=7
 	trait=education_learning_3 trait=wrathful trait=arrogant trait=scholar trait=brave
-	267.7.4={ birth=yes trait=creature_high_elf effect = { make_important_lore_character_effect = yes } }
+	267.7.4={ 
+		birth=yes trait=creature_high_elf 
+		effect = { make_important_lore_character_effect = yes }
+	}
 	326.3.22={
 		employer = 42304
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value }
 		}
 	}
 	603.10.1={
@@ -2205,8 +2398,8 @@
 	532.4.11={
 		employer = 42082
 		effect={
-			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value days = 10 }
-			# effect={set_light_gfx_effect=yes}
+			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+			# set_light_gfx_effect=yes
 		}
 	}
 	603.10.1={
@@ -2223,10 +2416,22 @@
 	dynasty=20025
 	culture=high_elf religion=cult_of_sunwell
 	martial=4 diplomacy=4 stewardship=5 intrigue=6 learning=5
-	trait=education_intrigue_4 trait=greedy trait=lustful trait=reveler_2 trait=arrogant
-	530.2.12={ birth=yes trait=creature_high_elf }
+	trait=education_intrigue_4 trait=greedy trait=lustful trait=lifestyle_reveler trait=arrogant
+	530.2.12={ birth=yes trait=creature_high_elf
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	545.9.11={
-		effect={ set_variable = { name = wc_rogue_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_dexterity_2
+		# trait=physical_lifestyle_strength_2
 	}
 	# Becomes an assassin in Ravenholdt
 	580.1.1={
@@ -2245,10 +2450,13 @@
 		employer = 52000
 		religion = nzoth_worship
 		effect={
-			change_variable = { name = wc_rogue_lifestyle_additional_perks_variable add = wc_perks_given_for_level_up_value }
-
 			#join_society_twilights_hammer_cult_effect = yes
+
+			change_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable add = wc_perks_given_for_physical_level_up_value }
+			change_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable add = wc_perks_given_for_physical_level_up_value }
 		}
+		# change_trait_rank = { trait = wc_lifestyle_physical_dexterity rank = 1 }
+		# change_trait_rank = { trait = wc_lifestyle_physical_strength rank = 1 }
 	}
 	612.2.11={ death=yes }
 }
@@ -2261,7 +2469,7 @@
 	culture=high_elf religion=cult_of_sunwell
 	martial=6 diplomacy=8 stewardship=7 intrigue=4 learning=8
 	trait=education_intrigue_3 trait=lustful trait=paranoid trait=gregarious 
-	1.10.17={ birth=yes }
+	2.10.17={ birth=yes }
 	584.1.28={ death=yes }
 }
 #Death-Hunter Hawkspear, a lore character
@@ -2274,7 +2482,12 @@
 	father=42309 #Meath
 	114.3.20={ birth=yes trait=creature_high_elf }
 	532.4.11={
-		effect={ set_variable = { name = wc_hunter_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_3
+		# trait=physical_lifestyle_dexterity_3
 	}
 	625.2.11={ death=yes }
 }
@@ -2289,7 +2502,12 @@
 	father=42309 #Meath
 	241.2.24={ birth=yes trait=creature_high_elf }
 	532.4.11={
-		effect={ set_variable = { name = wc_hunter_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_3
+		# trait=physical_lifestyle_dexterity_3
 	}
 	603.5.24={
 		trait=being_undead
@@ -2325,11 +2543,16 @@
 	trait=education_martial_4 trait=physique_good_1 trait=brave trait=arrogant
 	421.1.24={ birth=yes trait=creature_high_elf }
 	439.1.24={
-		effect={ set_variable = { name = wc_warrior_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_2
 	}
 	# Becomes a death knight and a blood elf
 	603.9.14={
-		effect={ set_variable = { name = wc_death_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value days = 10 } }
+		effect={ set_variable = { name = wc_death_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value } }
 		culture=blood_elf
 		trait=being_undead
 		religion=death_god
@@ -2354,7 +2577,12 @@
 	trait=education_stewardship_2 trait=shrewd trait=shy trait=compassionate
 	447.5.15={ birth=yes trait=creature_high_elf }
 	465.5.15={
-		effect={ set_variable = { name = wc_warrior_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value days = 10 } }
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_2
 	}
 	603.10.1={
 		death = {
@@ -2371,7 +2599,7 @@
 	culture=high_elf religion=cult_of_sunwell
 	martial=8 diplomacy=8 stewardship=8 intrigue=5 learning=8
 	trait=education_intrigue_4 trait=deceitful trait=cynical trait=ambitious
-	1.11.18={ birth=yes trait=creature_high_elf}
+	2.11.18={ birth=yes trait=creature_high_elf}
 	421.7.21={ death=yes }
 }
 42316={
@@ -2459,10 +2687,10 @@
 	328.7.21={ birth=yes trait=creature_high_elf}
 	360.3.8={
 		effect={
-			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_5_magic_trait_value days = 10 }
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_5_magic_trait_value }
 		}
 	}
-	480.1.2={
+	502.6.29={
 		employer = 59002	# Nehrud
 	}
 	530.1.1={
@@ -2472,4 +2700,60 @@
 		employer = 59000	# Antonidas
 	}
 	640.8.15={ death=yes }
+}
+
+jalinde_summerdrake={
+	name=Jalinde
+	female=yes
+	dynasty=summerdrake
+	culture=high_elf religion=cult_of_sunwell
+	trait=education_martial_3 trait=just trait=vengeful trait=stubborn
+	411.5.11={ birth=yes trait=creature_high_elf }
+	500.1.1={
+		effect={
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+		}
+		# trait=physical_lifestyle_dexterity_3
+		# trait=physical_lifestyle_strength_3
+	}
+	800.7.3={
+		death = yes
+	}
+}
+
+magister_umbric={
+	name=Umbric
+	culture=high_elf religion=cult_of_sunwell
+	martial=6 diplomacy=5 stewardship=4 intrigue=5 learning=7
+	trait=education_learning_3 trait=ambitious trait=humble trait=scholar trait=brave
+	267.7.4={
+		birth=yes trait=creature_high_elf
+		effect = { make_important_lore_character_effect = yes }
+	}
+	326.3.22={
+		effect={
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value }
+		}
+	}
+	603.10.1={
+		culture=blood_elf
+	}
+	616.1.8={
+		#culture=void_elf
+		trait=being_void
+		religion=voidfarer
+	}
+	704.1.6={ death=yes }
+}
+
+milan={ #of the Elven House of Scribes
+	name=Milan
+	culture=high_elf religion=cult_of_sunwell
+	martial=5 diplomacy=5 stewardship=4 intrigue=5 learning=8
+	trait=education_learning_4 trait=journaller trait=content trait=humble trait=scholar
+	267.7.4={
+		birth=yes trait=creature_high_elf
+	}
+	704.1.6={ death=yes }
 }
