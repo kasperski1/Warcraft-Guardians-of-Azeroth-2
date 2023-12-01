@@ -1,4 +1,4 @@
-has_collected_souls_amount_trigger = {
+﻿has_collected_souls_amount_trigger = {
 	custom_description = {
 		text = "HAS_SOULS"
 		value = $AMOUNT$
@@ -19,7 +19,6 @@ has_collected_souls_amount_trigger = {
 	}
 }
 
-﻿#TODO Maybe such triggers exist on some branch, so they should be replaced
 any_element_magic_openly_learnable_trigger = {
 	OR = {
 		fire_magic_openly_learnable_trigger = yes
