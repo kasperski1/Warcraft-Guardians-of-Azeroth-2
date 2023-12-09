@@ -2,7 +2,7 @@
 150000={
 	name=Krellian
 	dynasty=111000
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=6 diplomacy=5 stewardship=5 intrigue=7 learning=4
 	trait=education_martial_3
 	trait=ambitious trait=deceitful trait=diligent trait=arrogant
@@ -26,7 +26,7 @@
 150001={
 	name=Sesspira
 	female=yes
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=8 diplomacy=5 stewardship=6 intrigue=6 learning=5
 	trait=education_learning_3
 	trait=patient trait=arrogant trait=cynical trait=deceitful 
@@ -54,7 +54,7 @@
 	name=Zar'jira
 	female=yes
 	dynasty=111001
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=6 diplomacy=5 stewardship=7 intrigue=7 learning=8
 	trait=magic_good_1
 	trait=education_learning_3
@@ -80,7 +80,7 @@
 150125={
 	name=Gozrissas
 	dynasty=111002
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=8 diplomacy=7 stewardship=5 intrigue=8 learning=7
 	trait=education_martial_3 trait=wrathful trait=paranoid trait=aggressive_attacker trait=ambitious
 	2.12.12={ birth=yes trait=creature_naga trait = being_void }
@@ -105,7 +105,7 @@
 150126={
 	name=Skel'aph
 	dynasty=111002
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=7 diplomacy=6 stewardship=4 intrigue=7 learning=7
 	trait=education_learning_4 trait=sadistic trait=trusting trait=just 
 	trait=shy 
@@ -125,7 +125,7 @@
 	name=Moj'essak
 	female=yes
 	dynasty=111002
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	father=150125	#Gozrissas
 	239.7.14={ birth=yes trait=creature_naga trait = being_void }
 	350.1.1={
@@ -142,7 +142,7 @@
 	name=Krarraph
 	female=yes
 	dynasty=111002
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	father=150125	#Gozrissas
 	332.7.23={ birth=yes trait=creature_naga trait = being_void }
 	350.1.1={
@@ -159,7 +159,7 @@
 	name=Sre'lesha
 	female=yes
 	dynasty=111002
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	father=150125	#Gozrissas
 	400.8.3={ birth=yes trait=creature_naga trait = being_void }
 	550.1.1={
@@ -176,7 +176,7 @@
 	name=Shur'thass
 	female=yes
 	dynasty=111002
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	father=150125	#Gozrissas
 	510.12.1={ birth=yes trait=creature_naga trait = being_void }
 	550.1.1={
@@ -193,7 +193,7 @@
 150131={
 	name=Heth'jatar
 	dynasty=111003
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=5 diplomacy=4 stewardship=4 intrigue=7 learning=4
 	trait=education_martial_3 trait=torturer trait=shy trait=just trait=gluttonous 
 	10.1.1={ birth=yes trait=creature_naga trait = being_void }
@@ -210,7 +210,7 @@
 150132={
 	name=Il'erush
 	dynasty=111003
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=8 diplomacy=4 stewardship=6 intrigue=7 learning=8
 	trait=education_stewardship_4 trait=scholar trait=chaste trait=temperate 
 	father=150131	#Heth'jatar
@@ -229,7 +229,7 @@
 	name=Hoj'ti
 	female=yes
 	dynasty=111003
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	father=150131	#Heth'jatar
 	273.2.5={ birth=yes trait=creature_naga trait = being_void }
 	350.1.1={
@@ -247,7 +247,7 @@
 	name=Cassia
 	female=yes
 	dynasty=111004
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=8 diplomacy=4 stewardship=6 intrigue=7 learning=7
 	trait=education_learning_3 trait=diligent trait=arrogant trait=zealous trait=ambitious
 	disallow_random_traits = yes
@@ -269,7 +269,7 @@
 150145={
 	name=Krarraph
 	dynasty=111005
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=8 diplomacy=5 stewardship=8 intrigue=4 learning=6
 	trait=education_martial_2 trait=sadistic trait=ambitious trait=arrogant
 	disallow_random_traits = yes
@@ -298,7 +298,7 @@
 150146={
 	name=Naz'jan
 	dynasty=111016
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=7 diplomacy=6 stewardship=6 intrigue=4 learning=5
 	trait=education_stewardship_1 trait=sadistic trait=stubborn trait=arrogant
 	disallow_random_traits = yes
@@ -327,7 +327,7 @@
 150147={
 	name=Atoph
 	dynasty=111006
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=4 diplomacy=8 stewardship=6 intrigue=7 learning=8
 	trait=education_learning_2 trait=chaste trait=patient trait=gregarious trait=deceitful 
 	2.4.12={ birth=yes trait=creature_naga trait=being_void }
@@ -356,7 +356,7 @@
 150150={
 	name=Uu'nat
 	dynasty=111017
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=6 diplomacy=6 stewardship=5 intrigue=6 learning=6
 	trait=education_learning_4
 	trait=content trait=zealous trait=sadistic
@@ -380,7 +380,7 @@
 lady_darkscale={
 	name=Darkscale
 	female=yes
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=6 diplomacy=2 stewardship=4 intrigue=7 learning=4
 	trait=magic_good_1
 	trait=education_learning_3
@@ -403,7 +403,7 @@ athissa={
 	name=Athissa
 	female=yes
 	dynasty=hatecoil
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=6 diplomacy=2 stewardship=4 intrigue=7 learning=4
 	trait=magic_good_1
 	trait=education_learning_3
@@ -425,7 +425,7 @@ lady_hatecoil={
 	name=Vejsha
 	female=yes
 	dynasty=hatecoil
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=6 diplomacy=2 stewardship=4 intrigue=7 learning=5
 	mother=athissa
 	trait=magic_good_1
@@ -448,7 +448,7 @@ lady_sssurine={
 	name=Sssurine
 	female=yes
 	dynasty=hatecoil
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=6 diplomacy=2 stewardship=4 intrigue=7 learning=4
 	mother=athissa
 	trait=magic_good_1
@@ -474,7 +474,7 @@ lady_sssurine={
 tidemistress_sashjtar={
 	name=Sashj'tar
 	female=yes
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	martial=6 diplomacy=2 stewardship=4 intrigue=7 learning=4
 	trait=magic_good_1
 	trait=education_learning_3
@@ -496,7 +496,7 @@ tidemistress_sashjtar={
 lord_shalzaru={
 	name=Shalzaru
 	dynasty=hatecrest
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	trait=sadistic
 	2.10.15={ birth=yes trait=creature_naga trait = being_void }
 	12.1.1={
@@ -517,7 +517,7 @@ lord_shalzaru={
 lady_szallah={
 	name=Szallah
 	female=yes
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	2.10.15={ birth=yes trait=creature_naga trait = being_void }
 	50.1.1={
 		effect={
@@ -534,7 +534,7 @@ lady_szallah={
 general_skessesh={
 	name=Skessesh
 	dynasty=hatecrest
-	culture=naga religion=nzoth_worship
+	culture=naga religion=azshara_worship
 	trait=education_martial_2
 	father=lord_shalzaru
 	mother=lady_szallah
