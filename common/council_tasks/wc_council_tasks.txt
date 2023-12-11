@@ -262,7 +262,7 @@
 			NOT = { 
 				faith = scope:councillor.faith 
 				#culture = scope:councillor_liege.culture
-				development < 2
+				development_level < 2
 			}
 			trigger_if = {
 				limit = {
