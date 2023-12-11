@@ -75,6 +75,10 @@ closed_from_another_side = {
 #	icon = county_modifier_opinion_positive
 #	culture_conversion_speed = 0.5
 #}
+goblin_business = {
+	icon = stewardship_positive
+	monthly_income = 10
+}
 #Kodo Event
 wc_tauren_kodo_piety = {
 	monthly_piety = 0.1
@@ -155,7 +159,35 @@ wc_exploded_depot = {
 #Quilboar Blood shards
 wc_quilboar_bloodshards = {}
 
-goblin_buisness = {
-	icon = stewardship_positive
-	monthly_income = 10
+wc_earth_mother_prowess = {
+	icon = magic_positive
+	prowess = 2
+}
+
+wc_saw_white_kodo = {
+	icon = wc_tauren_kodo_neg
+	enemy_hostile_scheme_success_chance_add = 50
+}
+
+#Exodar modifiers
+wc_exodar_crystal_high = {
+	icon = wc_exodar_crystal_high
+	development_growth_factor = -0.5
+	levy_size = -0.75
+	levy_reinforcement_rate = -0.75
+	travel_danger = 40
+}
+wc_exodar_crystal_mid = {
+	icon = wc_exodar_crystal_mid
+	development_growth_factor = -0.25
+	levy_size = -0.4
+	levy_reinforcement_rate = -0.4
+	travel_danger = 20
+}
+wc_exodar_crystal_low = {
+	icon = wc_exodar_crystal
+	development_growth_factor = -0.1
+	levy_size = -0.25
+	levy_reinforcement_rate = -0.25
+	travel_danger = 10
 }

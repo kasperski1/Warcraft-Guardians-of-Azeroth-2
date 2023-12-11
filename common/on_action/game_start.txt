@@ -162,6 +162,12 @@ on_game_start = {
 		# }		
 		# HERE WARCRAFT REGENCIES like this
 		
+		if = { #added in on_game_start on action, because it gives error in error.log in 2nd-3d bookmark, idk
+			limit = { game_start_date > 591.11.1 }
+			character:10014 = {
+				add_trait = in_ice_prison
+			}
+		}
 		if = {
 			limit = { game_start_date < 604.1.1 game_start_date > 591.11.1 }
 			character:10014 = { designate_diarch = character:430000 }
@@ -169,6 +175,7 @@ on_game_start = {
 				NEW_DIARCH = character:430000
 				LIEGE = character:10014
 			}
+			character:10014 = { set_diarch = character:430000 }
 		}
 		if = {
 			limit = { game_start_date = 605.6.6 }
@@ -177,6 +184,7 @@ on_game_start = {
 				NEW_DIARCH = character:60003
 				LIEGE = character:10014
 			}
+			character:10014 = { set_diarch = character:60003 }
 		}
 		
 		# Set up anyone who should be in a regency at start whether we have sources or not.
@@ -187,6 +195,7 @@ on_game_start = {
 					is_adult = no
 					is_incapable = yes
 					is_imprisoned = yes
+					government_has_flag = government_is_clan
 				}
 			}
 			# We don't want to check over so many characters *twice*, so we check again inside the block to determine what type of regency to put 'em in.
@@ -198,6 +207,9 @@ on_game_start = {
 					delayed = yes
 				}
 			}
+			if = {
+				limit = { government_has_flag = government_is_clan }
+			}
 			## Entrenched Regencies.
 			else = {
 				trigger_event = {
@@ -208,6 +220,11 @@ on_game_start = {
 		}
 		# Unions, we have problems through history because of variables
 		union_members_on_game_start_effect = yes
+		every_ruler = {
+			limit = { NOT = { has_trait = race } }
+			copy_race_effect = { CHARACTER = this }
+			trigger_race_giving_no_gene_effect = yes
+		}
 	}
 }
 

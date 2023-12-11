@@ -30,7 +30,8 @@
  tenet_order_syncretism_desc:0 "There is something to be learned from Order or Arcane Сults. They may not follow the true faith, but that does not make them evil."
  doctrine_parameter_hostility_override_order_hostility_doctrine:1 "Considers Order [faiths|E], and is considered by Order [faiths|E], to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
  doctrine_parameter_hostility_override_tenet_order_syncretism:1 "Considers [faiths|E] with the $tenet_order_syncretism_name$ [core_tenet|E], and is considered by these [faiths|E], to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
- 
+ doctrine_parameter_hostility_override_odyn_hostility_doctrine:1 "Considers Odynic [faiths|E], and is considered by Odynic [faiths|E], to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
+
  tenet_shadow_syncretism_name:0 "Shadow Syncretism"
  tenet_shadow_syncretism_desc:0 "There is something to be learned from Shadow Сults. They may not follow the true faith, but that does not make them evil."
  doctrine_parameter_hostility_override_shadow_hostility_doctrine:1 "Considers Shadow [faiths|E], and is considered by Shadow [faiths|E], to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
@@ -45,8 +46,8 @@
 
  tenet_ritual_hunt_name:0 "Ritual Hunt"
  tenet_ritual_hunt_desc:0 "There is no better offering than the one you caught with your own hands as our ancestors did. Thus, we consider hunting sacred."
- doctrine_parameter_piety_from_hunts_active:1 "Hosting a [hunt|E] earns [piety|E]"
- doctrine_parameter_hunts_costs_less_active:1 "A [hunt|E] costs less [gold|E]"
+ doctrine_parameter_piety_from_hunts_active:1 "Hosting a #E hunt#! earns [piety|E]"
+ doctrine_parameter_hunts_costs_less_active:1 "A #E hunt#! costs less [gold|E]"
  
  tenet_progressivism_name:0 "Progressivism"
  tenet_progressivism_desc:0 "We see progress as an absolute good. Our society focuses on technological development and highly values tinkers and scientists."

@@ -125,9 +125,9 @@
  caster_max_size_add:0 "Max Size of [caster|E] [regiments|E]"
  caster_maintenance_mult:0 "[caster|E] Maintenance"
  caster_recruitment_cost_mult:0 "[caster|E] Recruitment Cost"
- 
- goblin_buisness:0 "Business Entrepreneur"
- goblin_buisness_desc:0 "This person knows how to make money"
+
+ goblin_business:0 "Business Entrepreneur"
+ goblin_business_desc:0 "This person knows how to make money"
 
  #Goblin Depot 
  wc_normal_depot:0 "Functioning Oil Depot"
@@ -211,3 +211,16 @@
  union_member_modifier_75_neg_desc:0 "$union_member_modifier_0_desc$"
  union_member_modifier_100_neg:0 "$union_member_modifier_0$(D4)"
  union_member_modifier_100_neg_desc:0 "$union_member_modifier_0_desc$"
+
+ wc_earth_mother_prowess:"Blessing of the Earth Mother"
+ wc_earth_mother_prowess_desc:1 "This person has been blessed by the spirits of the Earth Mother. Their prowess in battle is as deadly as a kodo protecting its young."
+
+ wc_saw_white_kodo:"Crimson Eyes"
+ wc_saw_white_kodo_desc:1 "This poor centaur has seen a horrific white skinned kodo, a grim omen for their people. It is the sign of both death and malice."
+
+ wc_exodar_crystal_high:"Exodar Crash Fallout - High"
+ wc_exodar_crystal_high_desc:1 "This county was hit by a massive storm of power crystals from the Exodar, causing widespread devastation and mutation. The land is barren, the people are sick, and the wildlife is hostile."
+ wc_exodar_crystal_mid:"Exodar Crash Fallout - Medium"
+ wc_exodar_crystal_mid_desc:"This county was exposed to a moderate amount of power crystals from the Exodar, causing some damage and alteration. The land is tainted and the wildlife is wary."
+ wc_exodar_crystal_low:"Exodar Crash Fallout - Low"
+ wc_exodar_crystal_low_desc:"This county was exposed to a few power crystals from the Exodar, causing a small amount of damage and alteration. The land and the wildlife are slightly tainted."
