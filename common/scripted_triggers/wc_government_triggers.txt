@@ -1,6 +1,5 @@
 ﻿can_keep_necro_government_trigger = {
 	is_landed = yes
-	
 	has_trait = being_undead
 	faith = { has_doctrine_parameter = death_magic_openly_learnable }
 }
@@ -80,6 +79,9 @@ can_keep_clan_government_trigger = {
 	OR = {
 		culture = { has_cultural_pillar = heritage_orcish }
 		culture = { has_cultural_pillar = heritage_tauren }
+		culture = { has_cultural_pillar = heritage_gorian }
+		culture = { has_cultural_pillar = heritage_agamagganic }
+		culture = { has_cultural_pillar = heritage_zaetaric }
 		culture = culture:wildhammer
 		culture = {
 			AND = {
