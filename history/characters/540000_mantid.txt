@@ -11,7 +11,10 @@
 		birth=yes trait=creature_mantid trait=being_void 
 		effect = { make_important_lore_character_effect = yes }
 	}
-	466.1.2={ effect={ set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value } } }
+	466.1.2={
+		effect={ set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value } }
+		trait=user_of_shadow_magic_4
+	}
 	603.1.1={
 		trait = paranoid	# Sha of Fear
 		trait=possessed_1	# Sha of Fear
@@ -44,6 +47,7 @@ zekhara = {
 	475.7.12={ birth=yes trait=creature_mantid trait=being_void }
 	585.7.12={
 		effect={ set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
+		trait=user_of_shadow_magic_3
 		employer = 540000
 	}
 	620.6.18={ death=yes }
@@ -3392,8 +3396,8 @@ zekhara = {
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_endurance_2
+		trait=physical_lifestyle_strength_2
 	}
 	619.4.1={ death=yes }
 }
@@ -4219,8 +4223,8 @@ zekhara = {
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_endurance_2
+		trait=physical_lifestyle_strength_2
 	}
 	618.5.3={ death=yes }
 }
@@ -5021,8 +5025,8 @@ zekhara = {
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_3
-		# trait=physical_lifestyle_strength_3
+		trait=physical_lifestyle_endurance_3
+		trait=physical_lifestyle_strength_3
 	}
 	611.2.11={ death=yes }
 }
@@ -6030,8 +6034,8 @@ zekhara = {
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_dexterity_2
+		trait=physical_lifestyle_strength_2
 	}
 	633.3.25={ death=yes }
 }
@@ -7903,8 +7907,8 @@ zekhara = {
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_endurance_2
+		trait=physical_lifestyle_strength_2
 	}
 	626.5.8={ death=yes }
 }
@@ -7992,8 +7996,8 @@ zekhara = {
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_dexterity_2
+		trait=physical_lifestyle_strength_2
 	}
 	612.3.13={ death=yes }
 }
@@ -8033,6 +8037,7 @@ zekhara = {
 	304.6.12={ birth=yes trait=creature_mantid trait=being_void }
 	560.1.1={
 		effect={ set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
+		trait=user_of_light_magic_3
 	}
 	612.3.13={ death=yes }
 }
@@ -8056,8 +8061,8 @@ zekhara = {
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_4
-		# trait=physical_lifestyle_dexterity_4
+		trait=physical_lifestyle_endurance_4
+		trait=physical_lifestyle_dexterity_4
 	}
 	#Died in Siege of Orgrimmar
 	613.11.1={
@@ -8080,6 +8085,7 @@ zekhara = {
 			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value }
 			#put_to_sleep_paragon_effect = yes
 		}
+		trait=user_of_order_magic_4
 	}
 	#Died in Siege of Orgrimmar
 	613.11.1={
@@ -8104,8 +8110,8 @@ zekhara = {
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_4
-		# trait=physical_lifestyle_strength_4
+		trait=physical_lifestyle_dexterity_4
+		trait=physical_lifestyle_strength_4
 	}
 	#Died in Siege of Orgrimmar
 	613.11.1={
@@ -8128,6 +8134,7 @@ zekhara = {
 			set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value }
 			#put_to_sleep_paragon_effect = yes
 		}
+		trait=user_of_shadow_magic_4
 	}
 	#Died in Siege of Orgrimmar
 	613.11.1={
@@ -8152,8 +8159,8 @@ zekhara = {
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_4
-		# trait=physical_lifestyle_strength_4
+		trait=physical_lifestyle_endurance_4
+		trait=physical_lifestyle_strength_4
 	}
 	#Died in Siege of Orgrimmar
 	613.11.1={
@@ -8178,8 +8185,8 @@ zekhara = {
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_4
-		# trait=physical_lifestyle_strength_4
+		trait=physical_lifestyle_endurance_4
+		trait=physical_lifestyle_strength_4
 	}
 	#Died in Siege of Orgrimmar
 	613.11.1={
@@ -8203,8 +8210,8 @@ zekhara = {
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_4
-		# trait=physical_lifestyle_strength_4
+		trait=physical_lifestyle_endurance_4
+		trait=physical_lifestyle_strength_4
 	}
 	#Killed during quest
 	613.6.1={
@@ -8228,8 +8235,8 @@ zekhara = {
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_4
-		# trait=physical_lifestyle_strength_4
+		trait=physical_lifestyle_endurance_4
+		trait=physical_lifestyle_strength_4
 	}
 	#Died, date unknown
 	40.11.1={
@@ -8251,6 +8258,7 @@ zekhara = {
 			set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value }
 			#put_to_sleep_paragon_effect = yes
 		}
+		trait=user_of_shadow_magic_4
 	}
 	#Killed during quest
 	613.6.1={
@@ -8275,8 +8283,8 @@ zekhara = {
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_4
-		# trait=physical_lifestyle_strength_4
+		trait=physical_lifestyle_dexterity_4
+		trait=physical_lifestyle_strength_4
 	}
 	#Died in Siege of Orgrimmar
 	613.11.1={
@@ -8302,8 +8310,8 @@ zekhara = {
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_4
-		# trait=physical_lifestyle_strength_4
+		trait=physical_lifestyle_dexterity_4
+		trait=physical_lifestyle_strength_4
 	}
 	#Died in Siege of Orgrimmar
 	613.11.1={
@@ -8327,8 +8335,8 @@ zekhara = {
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_4
-		# trait=physical_lifestyle_strength_4
+		trait=physical_lifestyle_dexterity_4
+		trait=physical_lifestyle_strength_4
 	}
 	#Died in Siege of Orgrimmar
 	613.11.1={

@@ -1356,6 +1356,34 @@ window = {
 								}
 							}
 
+							# Warcraft
+							vbox = {
+								datacontext = "[GetScriptedGui('wc_show_mana_gui')]"
+								datacontext = "[CharacterWindow.GetCharacter.MakeScope]"
+								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Character.MakeScope ).End)]"
+
+								spacing = -2
+								min_width = 40
+
+								tooltipwidget = {
+									widget_mana_breakdown_tooltip = {
+										datacontext = "[CharacterWindow.GetCharacter.MakeScope]"
+									}
+								}
+
+								wc_progressbar_current_mana = {
+									size = { 30 30 }
+									value = "[FixedPointToProgressbarValue(Scope.ScriptValue('wc_current_mana_percent_value'))]"
+								}
+
+								text_single = {
+									name = "mana"
+									text = "CHARACTER_WINDOW_MANA_AMOUNT_LINE"
+									default_format = "#high"
+									align = center|nobaseline
+								}
+							}
+
 							vbox = {
 								tooltip = "[Character.GetGoldTooltipWithBalance]"
 								min_width = 40
@@ -1476,6 +1504,35 @@ window = {
 
 						using = Animation_Character_Window_Refresh
 
+						vbox = {
+							visible = "[Not(Character.HasLandedTitles)]"
+							layoutpolicy_horizontal = expanding
+							margin = { 10 0 }
+							max_width = 280
+
+							text_single = {
+								name = "character_title"
+								layoutpolicy_horizontal = expanding
+								text = "CV_UNLANDED"
+								using = Font_Size_Medium
+								align = nobaseline
+							}
+
+							text_single = {
+								name = "government_type"
+								layoutpolicy_horizontal = expanding
+								text = "[Character.GetLocationDesc]"
+								default_format = "#low"
+								format_override = { high medium }
+								format_override = { V medium }
+								align = nobaseline
+								autoresize = no
+							}
+						}
+
+						expand = {}
+
+						
 						blockoverride "titles_extra_items"
 						{
 							visible = "[GreaterThan_int32(GetDataModelSize(CharacterWindow.GetTitles), '(int32)13' )]"

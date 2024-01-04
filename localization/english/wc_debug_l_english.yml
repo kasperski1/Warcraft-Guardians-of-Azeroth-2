@@ -11,6 +11,7 @@
 
  break_union_interaction:0 "Break [union]"
 
+
  add_light_void_infusion_decision:0 "Add light void infusion"
  add_light_void_infusion_decision_tooltip:0 ""
  add_light_void_infusion_decision_desc:0 ""
@@ -48,3 +49,9 @@
  remove_soul:0 "Remove soul"
  remove_soul_tooltip:0 ""
  remove_soul_confirm:0 "Remove"
+ 
+ debug_fire:0 "Fire"
+ debug_water:0 "Water"
+ debug_air:0 "Air"
+ debug_earth:0 "Earth"
+ debug_lower_elemental:0 "Lower Elemental Goodwill instead of raising it"

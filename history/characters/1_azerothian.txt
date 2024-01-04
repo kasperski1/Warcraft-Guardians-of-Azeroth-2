@@ -40,8 +40,8 @@
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_3
-		# trait=physical_lifestyle_strength_3
+		trait=physical_lifestyle_endurance_3
+		trait=physical_lifestyle_strength_3
 	}
 	568.6.10={
 		add_spouse=6
@@ -118,8 +118,8 @@
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_4
-		# trait=physical_lifestyle_strength_4
+		trait=physical_lifestyle_endurance_4
+		trait=physical_lifestyle_strength_4
 		add_spouse=482			# Tiffin
 		effect = {
 			if = { limit = { character:482 = { is_alive = yes } } set_relation_soulmate = character:482 }			# Tiffin
@@ -4958,6 +4958,7 @@
 	563.3.27={ birth=yes }
 	603.1.1={
 		effect={ set_variable = { name = wc_disorder_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
+		trait=user_of_disorder_magic_3
 	}
 	646.9.28={ death=yes }
 }
@@ -4994,8 +4995,8 @@
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_endurance_2
+		trait=physical_lifestyle_strength_2
 	}
 	660.7.16={ death=yes }
 }
@@ -5851,8 +5852,8 @@
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_3
-		# trait=physical_lifestyle_dexterity_3
+		trait=physical_lifestyle_endurance_3
+		trait=physical_lifestyle_dexterity_3
 		employer=28050 #Hemet[4337]
 	}
 	644.11.20={ death=yes }
@@ -6654,6 +6655,7 @@
 	544.5.15={ birth=yes }
 	564.1.1={
 		effect={ set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
+		trait=user_of_light_magic_3
 	}
 	585.1.1={
 		death={ death_reason = death_murder_known killer = 5000 }	# Killed by Medivh
@@ -7604,8 +7606,8 @@
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_3
-		# trait=physical_lifestyle_strength_3
+		trait=physical_lifestyle_endurance_3
+		trait=physical_lifestyle_strength_3
 	}
 	585.1.1={
 		death={ death_reason = death_murder_known killer = 5000 }	# Killed by Medivh
@@ -7644,6 +7646,7 @@
 	572.2.24={ birth=yes }
 	592.1.1={
 		effect={ set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
+		trait=user_of_order_magic_3
 	}
 	643.11.26={ death=yes }
 }
@@ -7793,8 +7796,8 @@
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_4
-		# trait=physical_lifestyle_strength_4
+		trait=physical_lifestyle_endurance_4
+		trait=physical_lifestyle_strength_4
 		add_gold = 300
 	}
 	565.1.1 = {
@@ -9265,8 +9268,8 @@
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_3
-		# trait=physical_lifestyle_strength_3
+		trait=physical_lifestyle_endurance_3
+		trait=physical_lifestyle_strength_3
 	}
 	585.1.1={
 		death={ death_reason = death_murder_known killer = 5000 }	# Killed by Medivh
@@ -10109,6 +10112,7 @@
 	529.8.10={ birth=yes }
 	550.1.1={
 		effect={ set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
+		trait=user_of_light_magic_3
 	}
 	585.1.1={
 		death={ death_reason = death_murder_known killer = 5000 }	# Killed by Medivh
@@ -10998,6 +11002,7 @@
 	547.6.19={ birth=yes }
 	567.1.1={
 		effect={ set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
+		trait=user_of_shadow_magic_3
 	}
 	585.1.1={
 		death={ death_reason = death_murder_known killer = 5000 }	# Killed by Medivh
@@ -12019,6 +12024,7 @@
 	541.4.17={ birth=yes }
 	561.1.1={
 		effect={ set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
+		trait=user_of_light_magic_3
 	}
 	585.1.1={
 		death={ death_reason = death_murder_known killer = 5000 }	# Killed by Medivh
@@ -13100,8 +13106,8 @@
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_4
-		# trait=physical_lifestyle_strength_4
+		trait=physical_lifestyle_dexterity_4
+		trait=physical_lifestyle_strength_4
 	}
 	560.1.1={
 		employer=1 #Barathen Wrynn
@@ -13144,8 +13150,8 @@
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_dexterity_2
+		trait=physical_lifestyle_strength_2
 	}
 	575.11.10={ death=yes }
 }
@@ -13179,8 +13185,8 @@
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_4
-		# trait=physical_lifestyle_strength_4
+		trait=physical_lifestyle_dexterity_4
+		trait=physical_lifestyle_strength_4
 	}
 	600.1.1={
 		employer=8 #Varian Wrynn
@@ -13225,8 +13231,8 @@
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_3
-		# trait=physical_lifestyle_strength_3
+		trait=physical_lifestyle_dexterity_3
+		trait=physical_lifestyle_strength_3
 		trait=physique_good_1
 	}
 	620.8.28={ death=yes }
@@ -13249,12 +13255,14 @@
 	}
 	580.1.1={
 		effect={ set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
+		trait=user_of_light_magic_3
 		employer=2 #Llane Wrynn
 		# Bishop of Stormwind before 585
 		give_council_position = councillor_court_chaplain
 	}
 	585.1.1={
 		effect={ set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
+		trait=user_of_shadow_magic_3
 		religion=forgotten_shadow
 	}
 	589.1.1={ death=yes }
@@ -13274,6 +13282,7 @@
 	}
 	580.1.1={
 		effect={ set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value } }
+		trait=user_of_light_magic_4
 		trait=beauty_good_1 # Don't ask anything
 	}
 	585.1.1={
@@ -13310,6 +13319,7 @@
 		trait=being_order # May change later with the Guardian trait
 		effect = {
 			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_5_magic_trait_value }
+			add_trait = user_of_order_magic_5
 		}
 		# trait = guardian_of_tirisfal
 		# effect = {
@@ -13324,6 +13334,7 @@
 		effect = {
 			set_variable = { name = wc_disorder_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_5_magic_trait_value }
 			add_character_flag = is_medivh_flag
+			add_trait = user_of_disorder_magic_5
 		}
 	}
 	584.1.1={
@@ -13350,6 +13361,7 @@
 	501.1.1={
 		birth=yes trait=creature_human
 		effect={ set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_4_magic_trait_value } }
+		trait=user_of_order_magic_4
 	}
 	537.1.1={
 		add_spouse = 60578
@@ -15840,14 +15852,15 @@
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_endurance_2
+		trait=physical_lifestyle_strength_2
 	}
 	573.8.10={
 		give_nickname = nick_the_dire
 	}
 	588.5.1={
 		effect={ set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value } }
+		trait=user_of_light_magic_1
 		#employer=60036
 		# create_bloodline = { #Silver Hand Founder
 			# type = gavinrad
@@ -15900,7 +15913,8 @@
 	}
 	590.4.12={ 
 		employer=5809
-		effect={ set_variable = { name = wc_death_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value } } 
+		effect={ set_variable = { name = wc_death_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value } }
+		trait=user_of_death_magic_1 
 		trait=lunatic_1 
 		religion=maldraxxi
 	}
@@ -15943,8 +15957,8 @@
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_endurance_2
+		trait=physical_lifestyle_strength_2
 	}
 	603.1.1={
 		effect={
@@ -15984,8 +15998,8 @@
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_3
-		# trait=physical_lifestyle_strength_3
+		trait=physical_lifestyle_dexterity_3
+		trait=physical_lifestyle_strength_3
 	}
 	620.1.1={ death=yes }
 }
@@ -16031,8 +16045,9 @@
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_death_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_endurance_2
+		trait=physical_lifestyle_strength_2
+		trait=user_of_death_magic_1
 		religion = maldraxxi
 	}
 	600.1.1={
@@ -16050,7 +16065,8 @@
 	disallow_random_traits = yes
 	541.2.13={ birth=yes trait=creature_human }
 	580.4.12={ 
-		effect={ set_variable = { name = wc_death_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } } 
+		effect={ set_variable = { name = wc_death_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
+		trait=user_of_death_magic_3 
 	}
 	608.3.19={ death=yes }
 }
@@ -16070,8 +16086,9 @@
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_light_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_endurance_2
+		trait=physical_lifestyle_strength_2
+		trait=user_of_light_magic_1
 	}
 	618.3.19={ death=yes }
 }
@@ -16103,8 +16120,8 @@
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_3
-		# trait=physical_lifestyle_strength_3
+		trait=physical_lifestyle_dexterity_3
+		trait=physical_lifestyle_strength_3
 	}
 	608.1.8 = {
 		death = {
@@ -16141,8 +16158,8 @@
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_dexterity_2
+		trait=physical_lifestyle_strength_2
 		religion=masonry
 		trait=peasant_leader
 	}
@@ -16165,8 +16182,8 @@
 			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
 		}
-		# trait=physical_lifestyle_dexterity_2
-		# trait=physical_lifestyle_strength_2
+		trait=physical_lifestyle_dexterity_2
+		trait=physical_lifestyle_strength_2
 		religion=masonry
 		trait=peasant_leader
 		trait=lunatic_1
@@ -16254,8 +16271,8 @@
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 		}
-		# trait=physical_lifestyle_endurance_3
-		# trait=physical_lifestyle_strength_3
+		trait=physical_lifestyle_endurance_3
+		trait=physical_lifestyle_strength_3
 	}
 	590.1.1 = {
 		employer=8						# Varian Wrynn
@@ -16314,6 +16331,7 @@
 			set_variable = { name = wc_elemental_air_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value }
 			#join_society_twilights_hammer_cult_effect = yes
 		}
+		trait=user_of_elemental_air_decay_magic_3
 	}
 	619.10.4={ death=yes }
 }

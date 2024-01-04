@@ -1,4 +1,5 @@
-﻿has_collected_souls_amount_trigger = {
+
+has_collected_souls_amount_trigger = {
 	custom_description = {
 		text = "HAS_SOULS"
 		value = $AMOUNT$
@@ -19,6 +20,20 @@
 	}
 }
 
+MAGIC_is_shunned_or_illegal_trigger = {
+	faith = {
+		OR = {
+			has_doctrine_parameter = $MAGIC$_magic_illegal
+			has_doctrine_parameter = $MAGIC$_magic_shunned
+		}
+	}
+}
+MAGIC_is_approved_trigger = {
+	faith = {
+		has_doctrine_parameter = $MAGIC$_magic_approved
+	}
+}
+#TODO Maybe such triggers exist on some branch, so they should be replaced
 any_element_magic_openly_learnable_trigger = {
 	OR = {
 		fire_magic_openly_learnable_trigger = yes
