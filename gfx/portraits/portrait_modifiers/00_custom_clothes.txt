@@ -1062,4 +1062,13 @@ add_accessory_modifiers = {
 			has_no_portrait_trigger = no
 		}
 	}
+	add_accessory_modifiers = {
+		gene = clothes
+		template = orc_war_nobility_clothes
+		
+		is_valid_custom = {
+			# Warcraft
+			has_no_portrait_trigger = no
+		}
+	}
 }

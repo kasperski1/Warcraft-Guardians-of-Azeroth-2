@@ -469,3 +469,16 @@ female_clothes_secular_blood_elven_nobility_02_low = {
 female_clothes_secular_blood_elven_nobility_02_high = {
 	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_secular_blood_elven_nobility_02_high_entity }
 }
+
+
+### Orc
+
+# Male
+male_clothes_secular_orc_war_nobility = {
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = male_clothes_secular_orc_war_nobility_entity }
+}
+
+# Female
+female_clothes_secular_orc_war_nobility = {
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_clothes_secular_orc_war_nobility_entity }
+}
