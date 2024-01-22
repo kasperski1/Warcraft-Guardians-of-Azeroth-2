@@ -2675,7 +2675,7 @@ special_genes = {
 			### Warcraft
 
 			orc_war_nobility_headgear = {
-				index = 157
+				index = 158
 				male = {
 					1 = male_headgear_secular_orc_war_nobility
 				}
