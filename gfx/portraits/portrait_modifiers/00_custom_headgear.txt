@@ -1412,4 +1412,14 @@
 		}
 	}
 
+	add_accessory_modifiers = {
+		gene = headgear
+		template = orc_war_nobility_headgear
+		
+		is_valid_custom = {
+			# Warcraft
+			has_no_portrait_trigger = no
+		}
+	}
+
 }
