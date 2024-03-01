@@ -44,6 +44,7 @@
 				is_race_gene_no_race_trait_trigger = { RACE = creature_grummle }
 				is_race_gene_no_race_trait_trigger = { RACE = creature_yaungol }
 				is_race_gene_no_race_trait_trigger = { RACE = creature_lich }
+				is_race_gene_no_race_trait_trigger = { RACE = creature_tortollan }
 			}
 		}
 		is_nerzhul_trigger = yes
@@ -79,6 +80,7 @@ prefer_no_lowborn_headgear = {
 		is_race_no_gene_trigger = { RACE = creature_goblin }
 		is_race_no_gene_trigger = { RACE = creature_ogre }
 		is_race_no_gene_trigger = { RACE = creature_draenei }
+		is_race_no_gene_trigger = { RACE = creature_manari }
 		is_race_no_gene_trigger = { RACE = creature_sayaadi }
 		is_race_no_gene_trigger = { RACE = creature_sea_giant }
 	}
@@ -233,6 +235,10 @@ has_yaungol_portrait_trigger = {
 has_lich_portrait_trigger = {
 	exists = culture
 	is_race_no_gene_trigger = { RACE = creature_lich }
+}
+has_tortollan_portrait_trigger = {
+	exists = culture
+	is_race_no_gene_trigger = { RACE = creature_tortollan }
 }
 
 # Must be used to check gender in portrait modifiers

@@ -208,6 +208,9 @@
 	}
 	603.1.1={
 		culture=naga
+		religion=neptulon_worship
+	}
+	611.1.1={
 		religion=azshara_worship
 	}
 }
@@ -272,13 +275,13 @@
 		religion=kirin_tor
 	}
 	603.1.1={
+		holding = tribal_holding
 		culture=murloc
-		religion=water_deities
+		religion=neptulon_worship
 	}
 	611.1.1={
 		culture=naga
 		religion=azshara_worship
-		holding = tribal_holding
 	}
 }
 
